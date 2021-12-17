@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 1-Setting Up a Raspberry Pi
-nav_order: 2
+title: 2-Difference in Means
+nav_order: 3
 parent: Workshop Activities
 ---
 
 #
 
-[NEXT STEP: WOO](act-2.html){: .btn .btn-blue }
+[NEXT STEP: Simple and Multiple Linear Regressions](act-3.html){: .btn .btn-blue }
