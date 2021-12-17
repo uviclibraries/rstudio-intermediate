@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 1-Setting Up a Raspberry Pi
-nav_order: 2
+title: 4-RShiny (Optional)
+nav_order: 5
 parent: Workshop Activities
 ---
 
 #
 
-[NEXT STEP: WOO](act-2.html){: .btn .btn-blue }
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
