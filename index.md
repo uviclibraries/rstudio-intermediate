@@ -26,6 +26,4 @@ At the end of this workshop, you will be able to:
 2.  Test for difference in means with t-tests and ANOVA
 3.  Construct, interpret and assess linear regression models
 
-UPDATE, YOU DINGUS
-
 [NEXT STEP: Pre-Workshop Activities](pre-workshop.html){: .btn .btn-blue }
