@@ -4,6 +4,7 @@ title: Activities Introduction
 nav_order: 1
 parent: Workshop Activities
 ---
+
 # Hands-On Activities Introduction
 
 - Please review the following [Introductory Slides](https://bit.ly/inte-rstudio-slides){:target="_blank"}
