@@ -78,10 +78,29 @@ Tips before you start. If you haven’t done so already, please do the following
         
         ```
         height = c(36, 42, 51, 32, 35, 38, 48, 50, 39, 38, 44, 46)
-        
+        team = c(rep("T1",3), rep("T2",3), rep("T3", 3), rep("T4", 3))
+        df = data.frame(height, team)
         ```
         
-    -   asdf
-    -   asdf
+        <img>
+        
+    -   We can make a boxplot to visualize the data by team.
+    
+        ```
+        boxplot(height ~ team, data = df, main = "Jump height across team")
+        ```
+        
+        <img>
+    
+    -   The function aov() can be used for fitting ANOVA models. The general form is `aov(response ~ factor, data=data_name)` where response represents the response variable and factor the variable that separates the data into groups. Once the ANOVA model is fit, we use the summary() function to view the result, which is in a standard ANOVA table.
+    
+        ```
+        model = aov(height ~ team, data = df)
+        summary(model)
+        ```
+        
+        <img>
+        
+        With a p-value of 0.172, we fail to reject the null hypothesis. In other words, we don’t have enough evidence to conclude that any mean is different.
 
 [NEXT STEP: Simple and Multiple Linear Regressions](act-3.html){: .btn .btn-blue }
