@@ -31,7 +31,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(score, mu = 65)
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
         
         The p-value of 0.03275 < 0.05, we reject the null hypothesis and conclude that the sample mean is significantly different from 65.
         
@@ -41,7 +41,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(score, mu = 65, alternative = "greater")
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
         
         The p-value of 0.01638 < 0.05, we reject the null hypothesis and conclude that the mean is significantly greater from 65.
         
@@ -66,7 +66,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(companyA, companyB)
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
         
         From the output, we can see that the p-value is 0.2508 > 0.05. Hence, there is no strong evidence showing the difference in the average times to deliver a pizza between Company A and Company B.
         
@@ -82,7 +82,7 @@ Tips before you start. If you haven’t done so already, please do the following
         df = data.frame(height, team)
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
         
     -   We can make a boxplot to visualize the data by team.
     
@@ -90,7 +90,7 @@ Tips before you start. If you haven’t done so already, please do the following
         boxplot(height ~ team, data = df, main = "Jump height across team")
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
     
     -   The function aov() can be used for fitting ANOVA models. The general form is `aov(response ~ factor, data=data_name)` where response represents the response variable and factor the variable that separates the data into groups. Once the ANOVA model is fit, we use the summary() function to view the result, which is in a standard ANOVA table.
     
@@ -99,7 +99,7 @@ Tips before you start. If you haven’t done so already, please do the following
         summary(model)
         ```
         
-        <img>
+        <img src="images/act-2/" alt="" style="width:180px;">
         
         With a p-value of 0.172, we fail to reject the null hypothesis. In other words, we don’t have enough evidence to conclude that any mean is different.
 
