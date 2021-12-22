@@ -5,8 +5,11 @@ nav_order: 10
 ---
 # Additional Resources & Acknowledgements
 
-## WORKSHOP NAME HERE Resources
+## R Studio Resources
+- **COMING SOON!**
 
+## R Shiny Resources
+- [Introduction to Shiny](https://shiny.rstudio.com/tutorial/){:target="_blank"}
 
 ## Acknowledgements
 
