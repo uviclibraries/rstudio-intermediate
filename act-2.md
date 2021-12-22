@@ -52,6 +52,25 @@ Tips before you start. If you haven’t done so already, please do the following
     Consider two pizza companies, A and B. We want to test if there is a significant difference in the average pizza delivery times between A and B. Following are the data collected from a sample of delivery times (in minutes). μA = μB is the null hypothesis.
     
     <table>
+        <tr>
+            <td>Delivery Time A</td>
+            <td>25.4</td>
+            <td>29.2</td>
+            <td>20.4</td>
+            <td>26.4</td>
+            <td>25.2</td>
+            <td>23.5</td>
+            <td>26.5</td>
+        </tr>
+        <tr>
+            <td>Delivery Time B</td>
+            <td>25.2</td>
+            <td>21.9</td>
+            <td>23.5</td>
+            <td>22.3</td>
+            <td>25.5</td>
+        </tr>
+    </table>
     
     -   Create two vectors for the delivery time of company A and company B in the console.
     
