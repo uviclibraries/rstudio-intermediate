@@ -4,7 +4,7 @@ title: Introduction
 nav_order: 1
 ---
 
-<img src="images/act-1/simple-1.png" style="float:right;width:180px;" alt="logo">
+<img src="images/logo.png" style="float:right;width:180px;" alt="logo">
 
 # Intermediate Data Analysis With RStudio
 
