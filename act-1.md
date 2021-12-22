@@ -22,7 +22,10 @@ We will create a report as a PDF file. The process is similar for html or docx d
 -   Open RStudio, click **File -> New File -> RMarkdown...**
 -   Enter title, author, and select the type of output format **PDF** and click **OK**
 -   The Markdown document with some example code will appear on your Editor window.
--   Click the <img src="images/act-1/icon.png" alt="small icon" style="width:30px;"> icon in the toolbar. A PDF file is now generated and saved to the current folder/directory.
+
+    <img src="images/act-1/icon.png" alt="small icon" style="float:right;width:120px;">
+
+-   Click the **Knit** icon in the toolbar (see right). A PDF file is now generated and saved to the current folder/directory.
 -   Continue editing this R Markdown document for other Activities.
 -   RStudio has a handy [cheat sheet for RMarkdown.](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf){:target="_blank"}
 
