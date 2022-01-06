@@ -7,8 +7,6 @@ parent: Workshop Activities
 
 # OPTIONAL: Interactive Data Dashboard With RShiny
 
-<img src="images/act-4/" alt="" style="width:180px;">
-
 In this activity, we build a data visualization dashboard with the package `shiny`
 
 1.  **Introduction**
