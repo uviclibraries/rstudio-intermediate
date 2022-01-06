@@ -92,7 +92,7 @@ In this activity, we build a data visualization dashboard with the package `shin
                 )
             )
         ```
-        **DOUBLE CHECK CODE**
+        **DOUBLE CHECK CODE (I might have messed up the transcription)**
         
         Run the app to see what it now looks like.
         
