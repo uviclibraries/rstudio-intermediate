@@ -58,14 +58,14 @@ In this activity, we build linear models to predict the life expectancy with one
         summary(lm_schooling)
         ```
         
-        <img src="images/act-3/simple-1.png" alt="plot the data" style="width:180px;">
+        <img src="images/act-3/simple-1.png" alt="plot the data" style="width:720px;">
         
         The small p-values (<0.001) indicate that the estimates for the intercept and slope estimates are statistically significant. The R-squared value of 0.6694 indicates that 66.94% of the variation in Life expectancy can be explained by Schooling. We can write the model mathematically as:
             **Life expectancy = 2.2287 * Schooling + 42.9016**
     
     -   Add this regression line to the plot with `abline(lm_schooling)`
     
-        <img src="images/act-3/simple-2.png" alt="regression line" style="width:180px;">
+        <img src="images/act-3/simple-2.png" alt="regression line" style="width:720px;">
     
     -   Get the 95% confidence interval for the coefficient estimates: `confint(lm_schooling)`
     -   Linear regression makes several assumptions about the data:
@@ -74,13 +74,13 @@ In this activity, we build linear models to predict the life expectancy with one
         
         `plot(lm_schooling, 1)`
         
-        <img src="images/act-3/simple-3.png" alt="fitted line" style="width:180px;">
+        <img src="images/act-3/simple-3.png" alt="fitted line" style="width:720px;">
         
         _Normality:_ points should be close to the line in the Normal Q-Q plot.
         
         `plot(lm_schooling, 2)`
         
-        <img src="images/act-3/simple-4.png" alt="normality" style="width:180px;">
+        <img src="images/act-3/simple-4.png" alt="normality" style="width:720px;">
         
         Overall the assumptions are met. However, there seem to be a few outliers seen in the Schooling vs. Life expectancy plot. We may want to examine these data points in further analysis.
 
@@ -92,7 +92,7 @@ In this activity, we build linear models to predict the life expectancy with one
         plot(select(life_expectancy_2015, one_of(c("Life expectancy", "BMI", "Schooling"))))
         ```
         
-        <img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:180px;">
+        <img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:720px;">
         
         From the plot, BMI doesn’t look as good as Schooling as a predictor of Life expectancy. But we will go ahead and fit a multiple regression model to have a concrete result.
     
@@ -106,7 +106,7 @@ In this activity, we build linear models to predict the life expectancy with one
         summary(lm_multiple)
         ```
         
-        <img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:180px;">
+        <img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:720px;">
         
         As we thought, BMI is not a significant variable with a p-value of 0.234. The model is still significant however, with p-value of 2.2e^-16, because Schooling is included. We conclude that the simple regression model adequately fits the data. For the sake of completeness, the multiple regression model can be written as:
         
