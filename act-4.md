@@ -26,7 +26,7 @@ In this activity, we build a data visualization dashboard with the package `shin
         -   A server (server) that contains the code to manipulate data and create graphs
         -   A function to combine these two previous components
             
-        <img src="images/act-4/intro-1.png" alt="shiny app" style="width:180px;">
+        <img src="images/act-4/intro-1.png" alt="shiny app" style="width:720px;">
         
         The Shiny package contains a few examples which display both the dashboards and the app.R scripts to create them. In practice, we don’t need to display the actual script as a part of the dashboard. Let’s give each of these a try. Exit each Shiny app by closing its window or hitting Escape on the keyboard.
         
@@ -141,7 +141,7 @@ In this activity, we build a data visualization dashboard with the package `shin
         summary(lm_multiple)
         ```
         
-        <img src="images/act-4/part3-1.png" alt="another one" style="width:180px;">
+        <img src="images/act-4/part3-1.png" alt="another one" style="width:720px;">
         
         As we thought, BMI is not a significant variable with a p-value of 0.234. The model is still significant however, with p-value of 2.2e^-16, because Schooling is included. We conclude that the simple regression model adequately fits the data. For the sake of completeness, the multiple regression model can be written as:
         
