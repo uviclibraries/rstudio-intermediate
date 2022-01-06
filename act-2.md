@@ -31,7 +31,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(score, mu = 65)
         ```
         
-        <img src="images/act-2/one-1.png" alt="one sample t-test" style="width:180px;">
+        <img src="images/act-2/one-1.png" alt="one sample t-test" style="width:720px;">
         
         The p-value of 0.03275 < 0.05, we reject the null hypothesis and conclude that the sample mean is significantly different from 65.
         
@@ -41,7 +41,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(score, mu = 65, alternative = "greater")
         ```
         
-        <img src="images/act-2/one-2.png" alt="one sample t-test" style="width:180px;">
+        <img src="images/act-2/one-2.png" alt="one sample t-test" style="width:720px;">
         
         The p-value of 0.01638 < 0.05, we reject the null hypothesis and conclude that the mean is significantly greater from 65.
         
@@ -85,7 +85,7 @@ Tips before you start. If you haven’t done so already, please do the following
         t.test(companyA, companyB)
         ```
         
-        <img src="images/act-2/one-3.png" alt="two sample t-test" style="width:180px;">
+        <img src="images/act-2/one-3.png" alt="two sample t-test" style="width:720px;">
         
         From the output, we can see that the p-value is 0.2508 > 0.05. Hence, there is no strong evidence showing the difference in the average times to deliver a pizza between Company A and Company B.
         
@@ -101,7 +101,7 @@ Tips before you start. If you haven’t done so already, please do the following
         df = data.frame(height, team)
         ```
         
-        <img src="images/act-2/one-way-2.png" alt="data in appropriate format" style="width:180px;">
+        <img src="images/act-2/one-way-2.png" alt="data in appropriate format" style="width:720px;">
         
     -   We can make a boxplot to visualize the data by team.
     
@@ -109,7 +109,7 @@ Tips before you start. If you haven’t done so already, please do the following
         boxplot(height ~ team, data = df, main = "Jump height across team")
         ```
         
-        <img src="images/act-2/one-way-3.png" alt="box plots" style="width:180px;">
+        <img src="images/act-2/one-way-3.png" alt="box plots" style="width:720px;">
     
     -   The function aov() can be used for fitting ANOVA models. The general form is `aov(response ~ factor, data=data_name)` where response represents the response variable and factor the variable that separates the data into groups. Once the ANOVA model is fit, we use the summary() function to view the result, which is in a standard ANOVA table.
     
@@ -118,7 +118,7 @@ Tips before you start. If you haven’t done so already, please do the following
         summary(model)
         ```
         
-        <img src="images/act-2/one-way-4.png" alt="data summary" style="width:180px;">
+        <img src="images/act-2/one-way-4.png" alt="data summary" style="width:720px;">
         
         With a p-value of 0.172, we fail to reject the null hypothesis. In other words, we don’t have enough evidence to conclude that any mean is different.
 
