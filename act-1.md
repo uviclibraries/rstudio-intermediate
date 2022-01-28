@@ -5,7 +5,7 @@ nav_order: 2
 parent: Workshop Activities
 ---
 
-# Generate Reports With R Markdown
+# Generate Reports With R Markdown 
 
 <img>
 
