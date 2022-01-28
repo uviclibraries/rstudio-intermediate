@@ -7,8 +7,6 @@ parent: Workshop Activities
 
 # Generate Reports With R Markdown
 
-<img src="images/act-1/logo.png" alt="logo" style="float:right;width:180px;">
-
 Tips before you start. If you haven’t done so already, please do the following:
 -   Pull up documentation for a function by executing `?function` in the Console.
 -   Install LaTeX in RStudio:
