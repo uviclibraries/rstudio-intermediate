@@ -75,8 +75,8 @@ Tips before you start. If you haven’t done so already, please do the following
     -   Create two vectors for the delivery time of company A and company B in the console.
     
         ```
-        companyA = c(25.4, 29.2, 20.4, 26.4, 25.2, 23.5, 26.5)
-        companyB = c(25.2, 21.9, 23.5, 22.3, 25.5)
+        companyA <- c(25.4, 29.2, 20.4, 26.4, 25.2, 23.5, 26.5)
+        companyB <- c(25.2, 21.9, 23.5, 22.3, 25.5)
         ```
     
     -   Conduct a two-sample t test and report the t and p values in the Console:
@@ -96,9 +96,9 @@ Tips before you start. If you haven’t done so already, please do the following
     -   We first input the data into an appropriate format.
         
         ```
-        height = c(36, 42, 51, 32, 35, 38, 48, 50, 39, 38, 44, 46)
-        team = c(rep("T1",3), rep("T2",3), rep("T3", 3), rep("T4", 3))
-        df = data.frame(height, team)
+        height <- c(36, 42, 51, 32, 35, 38, 48, 50, 39, 38, 44, 46)
+        team <- c(rep("T1",3), rep("T2",3), rep("T3", 3), rep("T4", 3))
+        df <- data.frame(height, team)
         ```
         
         <img src="images/act-2/one-way-2.png" alt="data in appropriate format" style="width:720px;">
@@ -114,7 +114,7 @@ Tips before you start. If you haven’t done so already, please do the following
     -   The function aov() can be used for fitting ANOVA models. The general form is `aov(response ~ factor, data=data_name)` where response represents the response variable and factor the variable that separates the data into groups. Once the ANOVA model is fit, we use the summary() function to view the result, which is in a standard ANOVA table.
     
         ```
-        model = aov(height ~ team, data = df)
+        model <- aov(height ~ team, data = df)
         summary(model)
         ```
         
