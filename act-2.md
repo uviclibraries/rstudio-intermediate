@@ -84,7 +84,7 @@ Tips before you start:
         From the output, we can see that the p-value is 0.2508 > 0.05. Hence, there is no strong evidence showing the difference in the average times to deliver a pizza between Company A and Company B.
         
     -   Try conducting a two-sample t-test where the alternative hypothesis is Company A delivers pizzas faster than Company B. What is the R command and what’s your conclusion?
-3.  One-way ANOVA (Analysis of Variance) is to determine whether the means from more than two populations or groups are equal or not.
+3.  **One-way ANOVA (Analysis of Variance)** is to determine whether the means from more than two populations or groups are equal or not.
 
     As an example, suppose that four basketball teams took a random sample of players regarding how high each player can jump (in inches). μ1 = μ2 = μ3 = μ4 is the null hypothesis. The alternative hypothesis is at least one μ is statistically different from the rest.
     -   We first input the data into an appropriate format.
