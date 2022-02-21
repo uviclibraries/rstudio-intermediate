@@ -7,14 +7,8 @@ parent: Workshop Activities
 
 # Test for Difference in Means (t-tests, ANOVA)
 
-Tips before you start. If you haven’t done so already, please do the following:
--   Pull up documentation for a function by executing `?function` in the Console.
--   Have the `tidyverse` package installed and the `dplyr` library loaded in RStudio.
-    ```
-    install.packages('tidyverse')
-    library(dplyr)
-    ```
--   [dplyr cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf){:target="_blank"}
+Tips before you start:
+-   You can pull up documentation for a function by executing `?<function_name>` (e.g. `?t.test`) in the Console.
 
 1.  **One-sample t-test** is a hypothesis test to see whether the mean of a data set is significantly different from a value.
 
@@ -121,5 +115,8 @@ Tips before you start. If you haven’t done so already, please do the following
         <img src="images/act-2/one-way-4.png" alt="data summary" style="width:720px;">
         
         With a p-value of 0.172, we fail to reject the null hypothesis. In other words, we don’t have enough evidence to conclude that any mean is different.
+        
+ 4. Your Markdown file now may look like this:
+ <img src="images/act-2/interRStudio.Rmd-act2.png" alt="act 2 Rmd" style="width:720px;">
 
 [NEXT STEP: Simple and Multiple Linear Regressions](act-3.html){: .btn .btn-blue }
