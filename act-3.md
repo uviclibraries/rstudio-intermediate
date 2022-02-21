@@ -7,8 +7,8 @@ parent: Workshop Activities
 
 # Linear Regressions
 
-Tips before you start. If you haven’t done so already, please do the following:
--   Pull up documentation for a function by executing `?function` in the Console.
+Tips before you start:
+-   You can pull up documentation for a function by executing `?function` (e.g. `?lm`) in the Console.
 -   Have the tidyverse package installed and the dplyr library loaded in RStudio.
 
     ```
@@ -20,21 +20,21 @@ Tips before you start. If you haven’t done so already, please do the following
 
 In this activity, we build linear models to predict the life expectancy with one or more independent/explanatory variables. Download the Life Expectancy dataset [here](https://drive.google.com/file/d/1Iu7ZPiC4u1P4bVUy0FDq15d61QXheJ4D/view?usp=sharing){:target="_blank"} and save it in your current directory or somewhere you can find later. [Data source.](https://www.kaggle.com/kumarajarshi/life-expectancy-who){:target="_blank"}
 
-1.  Import the dataset by typing the following:
+1.  **Import the dataset** by typing the following:
 
     ```
     life_expectancy <- read.csv("WHO Life Expectancy Data.csv") #change to the appropriate file path to the downloaded dataset on your computer
-    view(life_expectancy)
+    View(life_expectancy)
     ```
     
-    We are going to use only data from the year of 2015 as it is most recent. Do filtering by dplyr:
+    We are going to use only data from the year of 2015 as it is most recent. Do filtering by `dplyr`, which we cover in the workshop [Introduction to RStudio/Data Manipulation](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target="_blank"}:
     
     ```
     life_expectancy_2015 <- life_expectancy %>% filter(Year == 2015)
-    view(life_expectancy_2015)
+    View(life_expectancy_2015)
     ```
     
-    The lm(...) command creates linear regression models. It takes the following format:
+    The `lm(...)` command creates linear regression models. It takes the following format:
     
     ```
     lm([response variable] ~ [predictor variables], data = [data source])
@@ -42,13 +42,13 @@ In this activity, we build linear models to predict the life expectancy with one
 
 2.  **Simple linear regression:**
 
-    -   A plot of Schooling vs Life expectancy shows that a linear relationship is reasonable. Run:
+    -   A plot of Schooling vs Life expectancy shows that a linear relationship is reasonable. `life_expectancy_2015$Schooling` selects the `Schooling` column in the `life_expectancy_2015` dataset; the sane applies for the `Life expectancy` column. Run:
     
         ```
         plot(life_expectancy_2015$Schooling, life_expectancy_2015$`Life expectancy`)
         ```
     
-    -   We create a simple linear regression model where the response variable is life expectancy and the predictor variable is Schooling. The model can be written as:
+    -   We create a simple linear regression model where the response variable is `Life expectancy` and the predictor variable is `Schooling`. The model can be written as:
     
         life expectancy = slope * schooling + intercept
         **In R:**
@@ -118,6 +118,11 @@ In this activity, we build linear models to predict the life expectancy with one
         plot(lm_multiple)
         ```
 
-4.  Conduct a single or multiple regression analysis with other variables of your choosing. Make a scatter plot to visualize their linear relationship, build a model and assess the results. Let the instructors know if you need help!
+4.  **Conduct a single or multiple regression analysis with other variables of your choosing:**
+- Make a scatter plot to explore their linear relationship
+- Build a linear regression model 
+- Assess the results. 
+Let the instructors know if you need help! This activity's code in your Markdown file may look like this:
+<img src="images/act-3/act3Rmd.png" alt="act3 Rmd screenshot" style="width:720px;">
 
 [NEXT STEP: Interactive Data Dashboard With RShiny](act-4.html){: .btn .btn-blue }
