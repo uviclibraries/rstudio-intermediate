@@ -32,6 +32,6 @@ In this activity, we explore interactive data dashboard building with the packag
         runExample("01_hello")
         runExample("02_text")
         ```
-    - Check out the Shiny gallery: [https://shiny.rstudio.com/gallery/](https://shiny.rstudio.com/gallery/){:target="_blank"}
+    - Check out other Shiny creations: [https://shiny.rstudio.com/gallery/](https://shiny.rstudio.com/gallery/){:target="_blank"}
 
 [NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
