@@ -89,11 +89,11 @@ A function groups operations into a single line of code which can be used repeat
       - A function usually takes in a number of inputs (also called arguments), performs some operations with the inputs, and return a result. Take a look at this function `addScore` that does the same thing as the for loop we saw previously.
         ```
         addScore <- function(score) {
-          lenscore <- length(score)
-          for (i in c(1:lenscore) {
-            score[i] <- score[i] + 20
-          }
-          return score
+            lenscore <- length(score)
+            for (i in c(1:lenscore)) {
+                score[i] <- score[i] + 20
+            }
+            return(score)
         }
         ```
       - Running the lines above in R doesn't do anything yet other than defining the function. To run the function on the data `score`:
