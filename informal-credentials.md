@@ -17,7 +17,7 @@ DSC badges are awarded at the request of workshop participants after a DSC staff
 ### Earn an Informal Credential or Badge for Intermediate RStudio
 
 If you’d like to earn a DSC badge for this workshop, please email the following to: [dscommons@uvic.ca](mailto:dscommons@uvic.ca){:target="_blank"}
-1. **REQUIREMENT**
+1. The R Marksdown .pdf generated from Activities 2-4.
 
 ### Learn how you can share your DSC Badge
 To learn more about DSC badges and how you can share your them on LinkedIn profile, personal website, or resume, check our [DSC Badges webpage](https://onlineacademiccommunity.uvic.ca/dsc/badges/){:target="_blank"}.
