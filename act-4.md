@@ -51,10 +51,12 @@ A function groups operations into a single line of code which can be used repeat
       }
       ```
       <!--<img src="https://eecs.oregonstate.edu/ecampus-video/CS161/template/chapter_4/chapter4_images/4_09.png" alt="elseifs" style="width:500px;">this image address doesn't work anymore-->
-  <img src="images/act-4/C-For-Loop-Flowchart.jpeg" alt="forloop" style="float:right;width:160px;">
+ 
 
 2.  **Loops**
-      - A for loop runs some specific lines of code for a number of times.
+      - A for loop runs some specific lines of code for a number of times.<br>
+       <img src="images/act-4/C-For-Loop-Flowchart.jpeg" alt="forloop" style="width:160px;">
+
         `c(1:3)` is a vector containing integers `[1,2,3]`. The loop below will execute `statement` for a total of 3 times, one time each for i=1, 2, 3.
         ```
         for (i in c(1:3)) {
