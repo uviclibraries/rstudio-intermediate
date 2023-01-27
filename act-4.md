@@ -35,7 +35,7 @@ A function groups operations into a single line of code which can be used repeat
         print("x is larger than or equal to 10!")
       }
       ```
-      <img src="https://eecs.oregonstate.edu/ecampus-video/CS161/template/chapter_4/chapter4_images/4_08.png" alt="ifelse" style="width:500px;">
+      <!--<img src="https://eecs.oregonstate.edu/ecampus-video/CS161/template/chapter_4/chapter4_images/4_08.png" alt="ifelse" style="width:500px;"> this image address doesn't work anymore-->
 
     - How about checking more conditions? Use `else if`! Any guesses which message the code will print out?
       ```
@@ -50,12 +50,11 @@ A function groups operations into a single line of code which can be used repeat
         print("very large x")
       }
       ```
-      <img src="https://eecs.oregonstate.edu/ecampus-video/CS161/template/chapter_4/chapter4_images/4_09.png" alt="elseifs" style="width:500px;">
+      <!--<img src="https://eecs.oregonstate.edu/ecampus-video/CS161/template/chapter_4/chapter4_images/4_09.png" alt="elseifs" style="width:500px;">this image address doesn't work anymore-->
+  <img src="images/act-4/C-For-Loop-Flowchart.jpeg" alt="forloop" style="float:right;width:160px;">
 
 2.  **Loops**
       - A for loop runs some specific lines of code for a number of times.
-        <img src="https://cdn.techbeamers.com/wp-content/uploads/2019/01/C-For-Loop-Flowchart.jpeg" alt="forloop" style="width:500px;">
-
         `c(1:3)` is a vector containing integers `[1,2,3]`. The loop below will execute `statement` for a total of 3 times, one time each for i=1, 2, 3.
         ```
         for (i in c(1:3)) {
@@ -102,4 +101,4 @@ A function groups operations into a single line of code which can be used repeat
         ```
       - *Exercise*: Fancy adding an if statement to it? Try modifing the `addScore` function to also print out a warning when someone's new score is above 100 and if that happens, assign the score to the maximum value of 100. Feel free to ask the instructor for help!
 
-[NEXT STEP: Interactive Data Dashboard With RShiny](act-4.html){: .btn .btn-blue }
+[NEXT STEP: Interactive Data Dashboard With RShiny](act-5.html){: .btn .btn-blue }
