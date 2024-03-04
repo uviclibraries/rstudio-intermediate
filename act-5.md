@@ -1,8 +1,6 @@
 ---
 layout: default
 title: 5-RShiny (Optional)
-nav_order: 6
-parent: Workshop Activities
 ---
 
 # OPTIONAL: Interactive Data Dashboard With RShiny
@@ -34,4 +32,3 @@ In this activity, we explore interactive data dashboard building with the packag
         ```
     - Check out other Shiny creations: [https://shiny.rstudio.com/gallery/](https://shiny.rstudio.com/gallery/){:target="_blank"}
 
-[NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
