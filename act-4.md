@@ -103,4 +103,4 @@ A function groups operations into a single line of code which can be used repeat
         ```
       - *Exercise*: Fancy adding an if statement to it? Try modifing the `addScore` function to also print out a warning when someone's new score is above 100 and if that happens, assign the score to the maximum value of 100. Feel free to ask the instructor for help!
 
-[NEXT STEP: Interactive Data Dashboard With RShiny](act-5.html){: .btn .btn-blue }
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
