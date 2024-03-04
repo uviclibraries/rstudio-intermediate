@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5-RShiny (Optional)
+title: RShiny (Optional)
 ---
 
 # OPTIONAL: Interactive Data Dashboard With RShiny
