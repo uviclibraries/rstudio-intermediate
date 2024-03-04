@@ -12,6 +12,8 @@ nav_order: 10
 - [R for data science](https://search.library.uvic.ca/discovery/fulldisplay?context=L&vid=01VIC_INST:01UVIC&search_scope=MyInst_and_CI&tab=LIBALL&docid=alma9957587042407291){:target="_blank"}
 
 ## R Shiny Resources
+- [Interactive Data Dashboard With RShiny](act-5.html){:target="_blank"}
+
 - [Introduction to Shiny](https://shiny.rstudio.com/tutorial/){:target="_blank"}
 
 ## Acknowledgements
