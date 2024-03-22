@@ -24,14 +24,14 @@ In this activity, we build linear models to predict the life expectancy with one
 
     ```
     life_expectancy <- read.csv("WHO Life Expectancy Data.csv") #change to the appropriate file path to the downloaded dataset on your computer
-    View(life_expectancy)
+    head(life_expectancy,2)
     ```
     
     We are going to use only data from the year of 2015 as it is most recent. Do filtering by `dplyr`, which we cover in the workshop [Introduction to RStudio/Data Manipulation](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target="_blank"}:
     
     ```
     life_expectancy_2015 <- life_expectancy %>% filter(Year == 2015)
-    View(life_expectancy_2015)
+    head(life_expectancy_2015,2)
     ```
     
     The `lm(...)` command creates linear regression models. It takes the following format:
@@ -45,7 +45,7 @@ In this activity, we build linear models to predict the life expectancy with one
     -   A plot of Schooling vs Life expectancy shows that a linear relationship is reasonable. `life_expectancy_2015$Schooling` selects the `Schooling` column in the `life_expectancy_2015` dataset; the sane applies for the `Life expectancy` column. Run:
     
         ```
-        plot(life_expectancy_2015$Schooling, life_expectancy_2015$`Life expectancy`)
+        plot(life_expectancy_2015$Schooling, life_expectancy_2015$`Life.expectancy`)
         ```
     
     -   We create a simple linear regression model where the response variable is `Life expectancy` and the predictor variable is `Schooling`. The model can be written as:
@@ -54,7 +54,7 @@ In this activity, we build linear models to predict the life expectancy with one
         **In R:**
         
         ```
-        lm_schooling <- lm(life_expectancy_2015$`Life expectancy` ~ life_expectancy_2015$Schooling, data=life_expectancy_2015)
+        lm_schooling <- lm(`Life.expectancy` ~ Schooling, data=life_expectancy_2015)
         summary(lm_schooling)
         ```
         
