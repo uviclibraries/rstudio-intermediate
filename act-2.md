@@ -13,7 +13,7 @@ Tips before you start:
 1.  **One-sample t-test** is a hypothesis test to see whether the mean of a data set is significantly different from a value.
 
     As an example, we have a test scores sample of 8 students. The scores are 67, 69, 70, 72, 75, and 78. We use a one-sample t-test to see if the sample mean is significantly **different** from 65 at the 0.05 level. μ = 65 is the null hypothesis (μ is a character usually used to indicate population mean.)
-    -   In the Console, create a data vector called `score`
+    -   In the Code Editor (your RMarkdown file), create a data vector called `score`
         
         ```
         score <- c(70, 62, 67, 69, 90, 72, 75, 80)
