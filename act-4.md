@@ -57,7 +57,7 @@ A function groups operations into a single line of code which can be used repeat
       - A for loop runs some specific lines of code for a number of times.<br>
        <img src="images/act-4/C-For-Loop-Flowchart.jpeg" alt="forloop" style="width:200px;">
 
-        `c(1:3)` is a vector containing integers `[1,2,3]`. The loop below will execute `statement` for a total of 3 times, one time each for i=1, 2, 3.
+        `c(1:3)` is a vector containing integers `[1,2,3]`. The loop below will hypothetically execute `statement` for a total of 3 times, one time each for i=1, 2, 3. Don't try to run this loop; it's illustrative!
         ```
         for (i in c(1:3)) {
           <statement1>
@@ -69,7 +69,7 @@ A function groups operations into a single line of code which can be used repeat
         ```
         # score <- c(70, 62, 67, 69, 90, 72, 75, 80)
         lenscore <- length(score)
-        for (i in c(1:lenscore) {
+        for (i in c(1:lenscore)) {
           score[i] <- score[i] + 20
         }
         score
