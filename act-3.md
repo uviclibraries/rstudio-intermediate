@@ -16,7 +16,7 @@ Tips before you start:
     library(dplyr)
     ```
     
--   [dplyr cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf){:target="_blank"}
+-   [dplyr cheat sheet](https://rstudio-pubs-static.s3.amazonaws.com/1133628_e0cdf44420104207a6d9a270b383f06f.html){:target="_blank"}
 
 In this activity, we build linear models to predict the life expectancy with one or more independent/explanatory variables. Download the Life Expectancy dataset [here](https://uviclibraries.github.io/rstudio-intermediate/docs/WHO_Life_Expectancy_Data.csv){:target=“\_blank”} and save it in your current directory or somewhere you can find later. [Data source.](https://www.kaggle.com/kumarajarshi/life-expectancy-who){:target="_blank"}
 
