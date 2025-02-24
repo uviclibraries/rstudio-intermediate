@@ -14,7 +14,13 @@ Tips before you start. If you haven’t done so already, please do the following
     install.packages('tinytex')
     tinytex::install_tinytex()
     ```
-
+- If you see the following message, enter 'N' and continue to the next step.
+  ```
+  tinytex::install_tinytex()
+  Found '/usr/local/bin/tlmgr', which indicates a LaTeX distribution may have existed in the system.
+  Continue the installation anyway? (Y/N) N
+  ```
+  
 1. Read parts 1 - 6 of the [RMarkdown Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rmarkdown.html){:target="_blank"}
 2. For the rest of the workshop, we will save our code on a R Markdown file. Let's create this file in RStudio. The steps are similar to described in the cheatsheet.
 -   Open RStudio, click **File -> New File -> RMarkdown...**
