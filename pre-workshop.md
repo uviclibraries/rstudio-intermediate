@@ -6,7 +6,7 @@ nav_order: 2
 ## Pre-Workshop Videos & Activities
 This workshop is primarily hands-on practice with RStudio in order to learn to use key features of the software. To participate fully please do the following **before the workshop**:
 
-### Download & Install R, RStudio, and LaTeX
+### Download & Install R then RStudio
 
 -   Mac Installation
     -   [Mac Installation Video](https://youtu.be/dRkAvBz9Ibc){:target="_blank"} (3 min)
