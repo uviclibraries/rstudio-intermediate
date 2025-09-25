@@ -8,7 +8,6 @@ parent: Workshop Activities
 # Generate Reports With R Markdown
 
 Tips before you start. If you haven’t done so already, please do the following:
--   Pull up documentation for a function by executing `?function` in the Console.
 -   Install LaTeX in RStudio:
     ```
     install.packages('tinytex')
@@ -20,6 +19,7 @@ Tips before you start. If you haven’t done so already, please do the following
   Found '/usr/local/bin/tlmgr', which indicates a LaTeX distribution may have existed in the system.
   Continue the installation anyway? (Y/N) N
   ```
+- Also remember that, to pull up documentation for a function, you can execute `?function` in the Console.
   
 1. Read parts 1 - 6 of the [RMarkdown Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rmarkdown.html){:target="_blank"}
 2. For the rest of the workshop, we will save our code on a R Markdown file. Let's create this file in RStudio. The steps are similar to described in the cheatsheet.
