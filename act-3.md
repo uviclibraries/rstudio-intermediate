@@ -60,36 +60,37 @@ In this activity, we build linear models to predict the life expectancy with one
 lm_schooling <- lm(Life.expectancy ~ Schooling, data = life_expectancy_2015)
 summary(lm_schooling)
 ```
-        
-        <img src="images/act-3/simple-1.png" alt="plot the data" style="width:720px;">
-        
-        The small p-values (<0.001) indicate that the estimates for the intercept and slope estimates are statistically significant. The R-squared value of 0.6694 indicates that 66.94% of the variation in Life expectancy can be explained by Schooling. We can write the model mathematically as:
-            **Life expectancy = 2.2287 * Schooling + 42.9016**
     
-    -   Add this regression line to the plot with `abline(lm_schooling)`:
+<img src="images/act-3/simple-1.png" alt="plot the data" style="width:720px;">
+        
+The small p-values (<0.001) indicate that the estimates for the intercept and slope estimates are statistically significant. The R-squared value of 0.6694 indicates that 66.94% of the variation in Life expectancy can be explained by Schooling. We can write the model mathematically as:
+**Life expectancy = 2.2287 * Schooling + 42.9016**
+    
+-   Add this regression line to the plot with `abline(lm_schooling)`:
+  
 ```r
 plot(life_expectancy_2015$Schooling, life_expectancy_2015$Life.expectancy)
 abline(lm_schooling)
 ```
+ 
+ <img src="images/act-3/simple-2.png" alt="regression line" style="width:720px;">
     
-        <img src="images/act-3/simple-2.png" alt="regression line" style="width:720px;">
-    
-    -   Get the 95% confidence interval for the coefficient estimates: `confint(lm_schooling)`
-    -   Linear regression makes several assumptions about the data:
+-   Get the 95% confidence interval for the coefficient estimates: `confint(lm_schooling)`
+-   Linear regression makes several assumptions about the data:
         
-        _Linearity of the data & constant variance:_ we want to check the Residuals vs Fitted plot for no pattern, the red line should be fairly flat, the points should be equally scattered.
+    _Linearity of the data & constant variance:_ we want to check the Residuals vs Fitted plot for no pattern, the red line should be fairly flat, the points should be equally scattered.
         
-        `plot(lm_schooling, 1)`
+plot(lm_schooling, 1)`
         
-        <img src="images/act-3/simple-3.png" alt="fitted line" style="width:720px;">
+<img src="images/act-3/simple-3.png" alt="fitted line" style="width:720px;">
         
-        _Normality:_ points should be close to the line in the Normal Q-Q plot.
+_Normality:_ points should be close to the line in the Normal Q-Q plot.
         
-        `plot(lm_schooling, 2)`
+`plot(lm_schooling, 2)`
         
-        <img src="images/act-3/simple-4.png" alt="normality" style="width:720px;">
+<img src="images/act-3/simple-4.png" alt="normality" style="width:720px;">
         
-        Overall the assumptions are met. However, there seem to be a few outliers seen in the Schooling vs. Life expectancy plot. We may want to examine these data points in further analysis.
+Overall the assumptions are met. However, there seem to be a few outliers seen in the Schooling vs. Life expectancy plot. We may want to examine these data points in further analysis.
 
 3.  **Multiple linear regression:**
 
