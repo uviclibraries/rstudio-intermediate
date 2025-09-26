@@ -44,28 +44,33 @@ In this activity, we build linear models to predict the life expectancy with one
 
 2.  **Simple linear regression:**
 
-    -   A plot of Schooling vs Life expectancy shows that a linear relationship is reasonable. `life_expectancy_2015$Schooling` selects the `Schooling` column in the `life_expectancy_2015` dataset; the sane applies for the `Life expectancy` column. Run:
+    -   A plot of Schooling vs Life expectancy shows that a linear relationship is reasonable. `life_expectancy_2015$Schooling` selects the `Schooling` column in the `life_expectancy_2015` dataset; the same applies for the Life.expectancy column. Run:
     
         ```
-        plot(life_expectancy_2015$Schooling, life_expectancy_2015$`Life.expectancy`)
+        plot(life_expectancy_2015$Schooling, life_expectancy_2015$Life.expectancy)
         ```
     
     -   We create a simple linear regression model where the response variable is `Life expectancy` and the predictor variable is `Schooling`. The model can be written as:
     
         life expectancy = slope * schooling + intercept
-        **In R:**
         
-        ```
-        lm_schooling <- lm(`Life.expectancy` ~ Schooling, data=life_expectancy_2015)
-        summary(lm_schooling)
-        ```
+**In R:**
+        
+```
+lm_schooling <- lm(Life.expectancy ~ Schooling, data = life_expectancy_2015)
+summary(lm_schooling)
+```
         
         <img src="images/act-3/simple-1.png" alt="plot the data" style="width:720px;">
         
         The small p-values (<0.001) indicate that the estimates for the intercept and slope estimates are statistically significant. The R-squared value of 0.6694 indicates that 66.94% of the variation in Life expectancy can be explained by Schooling. We can write the model mathematically as:
             **Life expectancy = 2.2287 * Schooling + 42.9016**
     
-    -   Add this regression line to the plot with `abline(lm_schooling)`
+    -   Add this regression line to the plot with `abline(lm_schooling)`:
+```r
+plot(life_expectancy_2015$Schooling, life_expectancy_2015$Life.expectancy)
+abline(lm_schooling)
+```
     
         <img src="images/act-3/simple-2.png" alt="regression line" style="width:720px;">
     
@@ -88,25 +93,28 @@ In this activity, we build linear models to predict the life expectancy with one
 
 3.  **Multiple linear regression:**
 
-    -   We want to expand our model to consider an additional predictor variable, BMI. Run the following code:
+    -   We want to expand our model to consider an additional predictor variable, body mass index (BMI). Run the following code:
     
-        ```
-        plot(select(life_expectancy_2015, one_of(c("Life expectancy", "BMI", "Schooling"))))
-        ```
+```
+life_expectancy_2015 %>% 
+    select(Life.expectancy, BMI, Schooling) %>% # get the relevant columns form the dataset
+    pairs() # plot pairwise correlation plots
+```
         
         <img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:720px;">
         
         From the plot, BMI doesn’t look as good as Schooling as a predictor of Life expectancy. But we will go ahead and fit a multiple regression model to have a concrete result.
     
     -   Create a multiple linear regression model where the response variable is Life expectancy and the independent variables are BMI and Schooling. The model can be written as:
-        Life expectancy = slope_1 * BMI + slope_2 * Schooling + intercept
+    
+Life expectancy = slope_1 * BMI + slope_2 * Schooling + intercept
         
-        Run the following code for that model:
+Run the following code for that model:
         
-        ```
-        lm_multiple <- lm(life_expectancy_2015$`Life expectancy` ~ life_expectancy_2015$Schooling + life_expectancy_2015$BMI, data=life_expectancy_2015)
-        summary(lm_multiple)
-        ```
+```
+lm_multiple <- lm(Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
+summary(lm_multiple)
+```
         
         <img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:720px;">
         
