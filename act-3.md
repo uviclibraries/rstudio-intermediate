@@ -25,7 +25,7 @@ In this activity, we build linear models to predict the life expectancy with one
 1.  **Import the dataset** by typing the following:
 
     ```
-    life_expectancy <- read.csv("WHO Life Expectancy Data.csv") #change to the appropriate file path to the downloaded dataset on your computer
+    life_expectancy <- read.csv("WHO_Life_Expectancy_Data.csv") #change to the appropriate file path to the downloaded dataset on your computer
     head(life_expectancy,2)
     ```
     
