@@ -11,10 +11,10 @@ Tips before you start:
 -   You can pull up documentation for a function by executing `?function` (e.g. `?lm`) in the Console.
 -   Have the tidyverse package installed and the dplyr library loaded in RStudio.
 
-    ```
-    install.packages('tidyverse')
-    library(dplyr)
-    ```
+``` r
+# only need to run once in the console if tidyverse not installed: install.packages('tidyverse')
+library(dplyr)
+```
     
 -   [dplyr cheat sheet](https://rstudio-pubs-static.s3.amazonaws.com/1133628_e0cdf44420104207a6d9a270b383f06f.html){:target="_blank"}
 
