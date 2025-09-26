@@ -13,13 +13,13 @@ Tips before you start:
 1.  **One-sample t-test** is a hypothesis test to see whether the mean of a data set is significantly different from a value.
 
     As an example, we have a test scores sample of 8 students. The scores are 67, 69, 70, 72, 75, and 78. We use a one-sample t-test to see if the sample mean is significantly **different** from 65 at the 0.05 level. μ = 65 is the null hypothesis (μ is a character usually used to indicate population mean.)
-    -   In the Code Editor (your RMarkdown file), create a data vector called `score`
+    -   In the Code Editor (inside a chunk of code in your RMarkdown file), create a data vector called `score`
         
         ```
         score <- c(70, 62, 67, 69, 90, 72, 75, 80)
         ```
         
-    -   Conduct a one-sample t test and report the t-statistic and p-value
+    -   Conduct a one-sample t-test and report the t-statistic and p-value
     
         ```
         t.test(score, mu = 65)
@@ -66,14 +66,14 @@ Tips before you start:
         </tr>
     </table>
     
-    -   Create two vectors for the delivery time of company A and company B in the console.
+    -   Create two vectors for the delivery time of company A and company B in a code chunk in your RMarkdown file.
     
         ```
         companyA <- c(25.4, 29.2, 20.4, 26.4, 25.2, 23.5, 26.5)
         companyB <- c(25.2, 21.9, 23.5, 22.3, 25.5)
         ```
     
-    -   Conduct a two-sample t test and report the t and p values in the Console:
+    -   Conduct a two-sample t test and report the t and p values:
     
         ```
         t.test(companyA, companyB)
@@ -87,7 +87,7 @@ Tips before you start:
 3.  **One-way ANOVA (Analysis of Variance)** is to determine whether the means from more than two populations or groups are equal or not.
 
     As an example, suppose that four basketball teams took a random sample of players regarding how high each player can jump (in inches). μ1 = μ2 = μ3 = μ4 is the null hypothesis. The alternative hypothesis is at least one μ is statistically different from the rest.
-    -   We first input the data into an appropriate format.
+    -   We first input the data into an appropriate format (add to a code chunk in your RMarkdown file).
         
         ```
         height <- c(36, 42, 51, 32, 35, 38, 48, 50, 39, 38, 44, 46)
