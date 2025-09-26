@@ -101,12 +101,11 @@ life_expectancy_2015 %>%
     select(Life.expectancy, BMI, Schooling) %>% # get the relevant columns form the dataset
     pairs() # plot pairwise correlation plots
 ```
+<img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:720px;">
         
-        <img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:720px;">
-        
-        From the plot, BMI doesn’t look as good as Schooling as a predictor of Life expectancy. But we will go ahead and fit a multiple regression model to have a concrete result.
+From the plot, BMI doesn’t look as good as Schooling as a predictor of Life expectancy. But we will go ahead and fit a multiple regression model to have a concrete result.
     
-    -   Create a multiple linear regression model where the response variable is Life expectancy and the independent variables are BMI and Schooling. The model can be written as:
+-   Create a multiple linear regression model where the response variable is Life expectancy and the independent variables are BMI and Schooling. The model can be written as:
     
 Life expectancy = slope_1 * BMI + slope_2 * Schooling + intercept
         
@@ -116,24 +115,24 @@ Run the following code for that model:
 lm_multiple <- lm(Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
 summary(lm_multiple)
 ```
+<img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:720px;">
         
-        <img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:720px;">
+As we thought, BMI is not a significant variable with a p-value of 0.234. The model is still significant however, with p-value of 2.2e^-16, because Schooling is included. We conclude that the simple regression model adequately fits the data. For the sake of completeness, the multiple regression model can be written as:
         
-        As we thought, BMI is not a significant variable with a p-value of 0.234. The model is still significant however, with p-value of 2.2e^-16, because Schooling is included. We conclude that the simple regression model adequately fits the data. For the sake of completeness, the multiple regression model can be written as:
-        
-        Life expectancy = 2.16981 * Schooling + 0.02442 * BMI + 42.57196
+Life expectancy = 2.16981 * Schooling + 0.02442 * BMI + 42.57196
     
-    -   Similar to the simple model, this command produces graphs to check the model assumptions.
+-   Similar to the simple model, this command produces graphs to check the model assumptions.
 
-        ```
-        plot(lm_multiple)
-        ```
+```
+plot(lm_multiple)
+```
 
 4.  **Conduct a single or multiple regression analysis with other variables of your choosing:**
 - Make a scatter plot to explore their linear relationship
 - Build a linear regression model 
 - Assess the results. 
 Let the instructors know if you need help! This activity's code in your Markdown file may look like this:
+
 <img src="images/act-3/act3Rmd.png" alt="act3 Rmd screenshot" style="width:720px;">
 
-[NEXT STEP: Interactive Data Dashboard With RShiny](act-4.html){: .btn .btn-blue }
+[NEXT STEP: If statements, loops, and custom functions](act-4.html){: .btn .btn-blue }
