@@ -16,7 +16,7 @@ Tips before you start:
 library(dplyr)
 ```
     
--   [dplyr cheat sheet]([https://rstudio-pubs-static.s3.amazonaws.com/1133628_e0cdf44420104207a6d9a270b383f06f.html){:target="_blank"}
+-   [dplyr cheat sheet]([https://rstudio.github.io/cheatsheets/html/data-transformation.html?_gl=1*c6ltif*_ga*MTQ5MjA4OTM2OC4xNzYxMTU1MDYx*_ga_2C0WZ1JHG0*czE3NjExNTgwMTgkbzIkZzAkdDE3NjExNTgwMTgkajYwJGwwJGgw){:target="_blank"}
 
 In this activity, we build linear models to predict the life expectancy with one or more independent/explanatory variables. Download the Life Expectancy dataset by rightblocking on [this text](https://uviclibraries.github.io/rstudio-intermediate/docs/WHO_Life_Expectancy_Data.csv){:target=“\_blank”} and save select "Download linked file as". Save it in the same folder as your current R Markdown file. 
 
