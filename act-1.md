@@ -30,7 +30,7 @@ Tips before you start. If you haven’t done so already, please do the following
 
     <img src="images/act-1/icon.png" alt="small icon" style="float:right;width:120px;">
 
--   Click the **Knit** icon in the toolbar (see right). A PDF file is now generated and saved to the current folder/directory.
+-   Click the **Knit** icon in the toolbar (see image of the icon on the right to know what to look for). A PDF file is now generated and saved to the current folder/directory.
 -   Continue editing this R Markdown document for other Activities.
 
 [NEXT STEP: Tests For Difference in Means (t-tests, ANOVA)](act-2.html){: .btn .btn-blue }
