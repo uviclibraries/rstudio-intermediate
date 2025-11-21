@@ -37,7 +37,7 @@ The simple text in .Rmd files should be formatted using the [Markdown language](
   
 ## Creating an R Markdown document
 
-For the rest of the workshop, we will save our code in an R Markdown file. Let's create this file in RStudio. The steps are similar to those described in the cheatsheet.
+For the rest of the workshop, we will save our code in an R Markdown file. Let's create this file in RStudio.
 -   Open RStudio, click **File -> New File -> RMarkdown...**
 -   Enter title, author, and select the type of output format **PDF** and click **OK*
 -   The Markdown document with some example code will appear in your Editor window.
