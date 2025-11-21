@@ -32,13 +32,13 @@ R Markdown documents can be exported (or "knitted") into .html, .docx, or .pdf f
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
-
-- If you see the following message, enter 'N' and continue to the next step.
+If you see the following message, enter 'N' and continue to the next step.
 ```
 tinytex::install_tinytex()
 Found '/usr/local/bin/tlmgr', which indicates a LaTeX distribution may have existed in the system.
 Continue the installation anyway? (Y/N) N
 ```
+
 If you want to know more about LaTeX, you can check our [Introduction to LaTeX](https://uviclibraries.github.io/latex/){:target="_blank"} workshop.
 
 [NEXT STEP: Introduction to Hands-On Activities](activities-intro.html){: .btn .btn-blue }
