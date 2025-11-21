@@ -41,7 +41,7 @@ For the rest of the workshop, we will save our code in an R Markdown file. Let's
 -   Open RStudio, click **File -> New File -> RMarkdown...**
 -   Enter title, author, and select the type of output format **PDF** and click **OK*
 -   The Markdown document with some example code will appear in your Editor window.
-    <img src="images/act-1/marrkdown-example.png" alt="markdown example" style="width:500px">
+    <img src="images/act-1/markdown-file.png" alt="markdown example" style="width:500px">
 
 -   After creating your R Markdown file, you must save it. Click **File -> Save As ->...** Enter the filename and make sure to remember where you saved it.
 
