@@ -17,7 +17,7 @@ R Markdown is a text language that can be used to combine code, code outputs (i.
 
 The .Rmd files are plain text files. They contain three types of content:
 - A section with metadata about the document (i.e. author, title, date, output format, etc), in what is called a YAML header. They are separated by the rest of the document by `---`s.
-- Chunks of code where the actual R code is written. The start of an R chunk is marked by ````{r}`, and the end is marked by `````.
+- Chunks of code where the actual R code is written. The start of an R chunk is marked by \`\`\`{r}, and the end is marked by \`\`\`.
 - Text using simple text formatting. Everything not between the YAML and code chunk marks is read as simple text.
 
 See the example markdown file below and try to identify the three types of content:
