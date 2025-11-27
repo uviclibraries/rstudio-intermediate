@@ -1,7 +1,15 @@
+---
+layout: default
+title: 2-Difference in Means
+nav_order: 3
+parent: Workshop Activities
+output: 
+  github_document:
+      preserve_yaml: TRUE
+---
+
 2-Difference in Means
 ================
-
-# 2-Difference in Means
 
 # Test for Difference in Means (t-tests, ANOVA)
 
