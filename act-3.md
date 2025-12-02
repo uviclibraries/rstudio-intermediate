@@ -150,7 +150,7 @@ head(life_expectancy_2015)
     ## 5                           0.784      13.9
     ## 6                           0.826      17.3
 
-## Simple linear regression model
+## Simple linear regression
 
 Linear regressions are used when we want to investigate relationships
 between variables. For example, in this case, imagine we want to
@@ -170,7 +170,7 @@ In this case, life expectancy is our response variable (i.e., we expect
 it to respond to the level of schooling), and schooling is our predictor
 variable (i.e., we expect it to predict life expectancy).
 
-### Vizualise trends
+### Visualize trends
 
 To start, you first want to visualize the relationship in a plot to see
 if a linear relationship is reasonable. We will be using ggplot (part of
@@ -246,26 +246,26 @@ There is a lot of information in this output:
   t-test (the t-value and the p-value associated with it) testing
   whether these values are significantly different from 0.
 
-  - The small p-values for the coefficients (\<0.001) indicate that the
-    estimates for the intercept and slope are statistically significant.
-    The specific values mean that we can write the model mathematically
-    as: **Life expectancy = 42.9016 + 2.2287 \* Schooling**.
+- The small p-values for the coefficients (\<0.001) indicate that the
+  estimates for the intercept and slope are statistically significant.
+  The specific values mean that we can write the model mathematically
+  as: **Life expectancy = 42.9016 + 2.2287 \* Schooling**.
 
 - The **bottom part** of the results gives you a summary of the overall
   fit of the model (i.e., how well the model explains your data). The
   most important are the R-squared, which tells you how much variance
-  the model explains (in this case, the R-squared value of 0.6694
-  indicates that 66.94% of the variance in Life Expectancy is explained
-  by Schooling), and the results associated with the F-statistic, which
-  tells you the significance of your entire model (and not just each
-  individual coefficients, as the t-tests above show).
+  the model explains, and the results associated with the F-statistic,
+  which tells you the significance of your entire model (and not just
+  each individual coefficients, as the t-tests above show).
 
-  - The high R-square and the small p-value here (\<0.001) tell you that
-    this model is a good fit that explain a lot of variance in your
-    data.
+- In this case, the R-squared value of 0.6694 indicates that 66.94% of
+  the variance in Life Expectancy is explained by Schooling. The high
+  R-square and the small p-value here (\<0.001) tell you that this model
+  is a good fit that explains a lot of variance in your data.
 
 You might also want to get the 95% confidence interval for the
-coefficient estimates:
+coefficient estimates. Type this in a chunk of code and send it to the
+command line:
 
 ``` r
 # Get confidence intervals of model estimates
@@ -277,14 +277,15 @@ confint(lm_schooling)
     ## Schooling    1.99229  2.465164
 
 We can also visualize this model by adding a regression line to the
-plot.
+plot. For that, type this in a chunk of code and send it to the command
+line:
 
 ``` r
 # Create a scatter plot of life expectancy by Schooling with the fitted line of a linear regression
 ggplot(data = life_expectancy_2015, # specify the data
        aes(x = Schooling, y = Life.expectancy)) + # specify the variables
   geom_point() + # plot a scatter plot
-  geom_smooth(method = "lm") # add a fitted line with confidence interval using the linear model (lm) method
+  geom_smooth(method = "lm") # add a fitted line with confidence intervals using the linear model (lm) method
 ```
 
 ![](act-3_files/figure-gfm/smooth-1.png)<!-- -->
@@ -298,9 +299,9 @@ make any inferences from this model.
 Linear regression makes several assumptions about the data, which form
 the acronym LINE: **l**inearity, **i**ndependence, **n**ormality, and
 **e**qual variance of the residuals. To inspect these assumptions, you
-use the function `plot()` on a `lm` object in R (i.e. the object with
-results of a linear model), which plots 4 useful diagnostics plots for
-regression models.
+can use the function `plot()` on a `lm` object in R (i.e. the object
+with results of a linear model), which plots 4 useful diagnostics plots
+for regression models.
 
 - **L**inearity: the model assumes the relationship between the
   variables is a linear relationship. You can check that visually in the
@@ -326,12 +327,12 @@ fitted values as they seem to be the ones deviating from the flat line.
   assumption if you have concerns about temporal or spatial
   non-independence, usually this assumption is met by considering the
   structure of the data. In this case, we can reasonaly assume that the
-  contruies are independent observations.
+  contries are independent observations.
 
 - **N**ormality of the residuals: the model assumes the residuals are
   normally distributed. To inspect this, you can check a Q-Q Plot of the
-  residuals. In this point, the points should close to the line
-  (i.e. the line shows what wouls be expected for a normal
+  residuals. In this plot, the points should be close to the line
+  (i.e. the line shows what would be expected for a normal
   distribution).
 
 ``` r
@@ -349,12 +350,9 @@ analysis.
   the residuals around the fitted line (i.e. their variance) is the same
   for the entire range of the predictor variable. To inspect that, you
   can plot a scatter plot of standardized residuals versus fitted
-  values. The standardized residuals are just teh residuals standardized
-  by their standard deviation, which makes comparison between models and
-  identification of outlines easier, but you don’t need to worry much
-  about that here. Mainly, you want to check if this plot has a flat
-  line, which would tell you the residuals have the same variance same
-  across the model.
+  values. Mainly, you want to check if this plot has a flat line, which
+  would tell you the residuals have the same variance same across the
+  model.
 
 ``` r
 # Plot Q-Q plot of the residuals
@@ -363,60 +361,121 @@ plot(lm_schooling, 3) # the number 3 tells R to plot the 3rd diagnostic plot
 
 ![](act-3_files/figure-gfm/variance-1.png)<!-- -->
 
-Again, the model seels to meet the assumption with a few outliers that
+Again, the model seems to meet the assumption with a few outliers that
 might need to be examined further.
 
 ## Multiple linear regression
 
-    -   We want to expand our model to consider an additional predictor variable, body mass index (BMI). Run the following code:
+Multiple linear regressions are very similar to simple regressions, but
+they contain more than one predictor variables. For example, we might
+want to expand our model to consider the simultaneous effect of
+schooling and an additional predictor variable, the average body mass
+index of the population (BMI).
 
-    life_expectancy_2015 %>% 
-        select(Life.expectancy, BMI, Schooling) %>% # get the relevant columns form the dataset
-        pairs() # plot pairwise correlation plots
+### Visualize trends
 
-<img src="images/act-3/multiple-1.png" alt="multiple plots" style="width:720px;"/>
+First, let’s visualize the relationships:
 
-From the plot, BMI doesn’t look as good as Schooling as a predictor of
+``` r
+life_expectancy_2015 %>% 
+  # Select the three relevant variables
+  select(Life.expectancy, BMI, Schooling) %>%
+  # plot pairwise correlation plots
+  pairs() 
+```
+
+![](act-3_files/figure-gfm/pairwise-1.png)<!-- -->
+
+From the plot, BMI does not look as good as Schooling as a predictor of
 Life expectancy. But we will go ahead and fit a multiple regression
 model to have a concrete result.
 
-- Create a multiple linear regression model where the response variable
-  is Life expectancy and the independent variables are BMI and
-  Schooling. The model can be written as:
+### Fit a multiple linear regression model
+
+Create a multiple linear regression model where the response variable is
+Life expectancy and the predictor variables are BMI and Schooling. The
+model can be written as:
 
 Life expectancy = slope_1 \* BMI + slope_2 \* Schooling + intercept
 
-Run the following code for that model:
+Type the following code in a chunk of code and send it to the command
+line to fit that model:
 
-    lm_multiple <- lm(Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
-    summary(lm_multiple)
+``` r
+# Fit a multiple regression linear model
+lm_multiple <- lm(Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
 
-<img src="images/act-3/multiple-2.png" alt="modelling life expectancy" style="width:720px;"/>
+# See the results of the model
+summary(lm_multiple)
+```
 
-As we thought, BMI is not a significant variable with a p-value of
-0.234. The model is still significant however, with p-value of 2.2e^-16,
-because Schooling is included. We conclude that the simple regression
-model adequately fits the data. For the sake of completeness, the
-multiple regression model can be written as:
+    ## 
+    ## Call:
+    ## lm(formula = Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
+    ## 
+    ## Residuals:
+    ##      Min       1Q   Median       3Q      Max 
+    ## -15.4768  -2.4894   0.1514   3.0108  11.2459 
+    ## 
+    ## Coefficients:
+    ##             Estimate Std. Error t value Pr(>|t|)    
+    ## (Intercept) 42.57196    1.66503  25.568   <2e-16 ***
+    ## Schooling    2.16981    0.15029  14.437   <2e-16 ***
+    ## BMI          0.02442    0.02045   1.194    0.234    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 4.569 on 168 degrees of freedom
+    ##   (12 observations deleted due to missingness)
+    ## Multiple R-squared:  0.6677, Adjusted R-squared:  0.6638 
+    ## F-statistic: 168.8 on 2 and 168 DF,  p-value: < 2.2e-16
+
+As we thought, BMI is not a significant predictor variable with a
+p-value of 0.234. The model is still significant however, with p-value
+of 2.2e^-16, because Schooling is included. We conclude that the simple
+regression model adequately fits the data. For the sake of completeness,
+the multiple regression model can be written as:
 
 Life expectancy = 2.16981 \* Schooling + 0.02442 \* BMI + 42.57196
 
-- Similar to the simple model, this command produces graphs to check the
-  model assumptions.
+### Assumptions
 
-<!-- -->
+Similar to the simple model, this command produces graphs to check the
+model assumptions.
 
-    plot(lm_multiple)
+``` r
+# Changes plotting setting to create a panel with two rows and two columns to plot 4 graphs
+par(mfrow = c(2,2))
 
-4.  **Conduct a single or multiple regression analysis with other
-    variables of your choosing:**
+# Plot the diagnostic plots (without number, R will plot all four plots)
+plot(lm_multiple)
+```
+
+![](act-3_files/figure-gfm/assumption-1.png)<!-- -->
+
+``` r
+# Returns the settings for plots for single plot (one row and one column)
+par(mfrow = c(1,1))
+```
+
+Again, the model does not seem to deviate much from assumtpions, but
+some outliers might be worth investigating further. The Residuals vs
+Leverage plot is helpful to identify outliers that might be affecting
+the model: they are show with the number of observation right next to
+(i.e., in this case, observations number 43, 54, and 147 are outliers)
+
+## Conduct a single or multiple regression analysis with other variables of your choosing
+
+You can now use the `life_expectancy` dataset to explore other
+relationships of your choosing. For that:
 
 - Make a scatter plot to explore their linear relationship
 - Build a linear regression model
-- Assess the results. Let the instructors know if you need help! This
-  activity’s code in your Markdown file may look like this:
+- Assess the results. Let the instructors know if you need help!
 
-<img src="images/act-3/act3Rmd.png" alt="act3 Rmd screenshot" style="width:720px;"/>
+As the end of this activity, your Markdown file may look like this:
+
+<img src="act-3_files/act3-rmarkdown.png" alt="act3 Rmd screenshot" style="width:720px;"/>
 
 [NEXT STEP: If statements, loops, and custom functions](act-4.html){:
 .btn .btn-blue }
