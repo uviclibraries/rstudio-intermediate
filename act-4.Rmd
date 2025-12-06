@@ -34,9 +34,15 @@ endCodeDetailsBlock <- function() {
 
 # If Statements, Loops, Custom Functions
 
-This sections covers some intermediate coding skills that you can use to make your code more efficient: ifs, loops, and custom functions. 
+## Tips before you start:
 
-**If** statements and **loops** help implement logical operations in any programming language. A **function** groups operations into a single line of code which can be used repeatedly with different inputs.We will learn how to write these operations in R through basic examples.
+-   You might want to start a new .Rmd file for this activity
+
+-   Throughout this workshop, instead of typing in commands directly in the command line or in the code editor, type them in chunks of code in your .Rmd file.
+
+This sections covers some intermediate coding skills that you can use to make your code more efficient: ifs, for loops, and custom functions. 
+
+**If** statements and **loops** help implement logical operations in any programming language. A **function** groups operations into a single line of code which can be used repeatedly with different inputs. We will learn how to write these operations in R through basic examples.
 
 ## If Statements
 
@@ -88,7 +94,7 @@ endCodeDetailsBlock()
 ```
 </div>
 
-We can also the if statements to include an `else` clause to execute another statement if the condition is False. For example:
+We can also edit the if statements to include an `else` clause to execute another statement if the condition is False. For example:
 ```{r if-else}
 # Change x to the value of 10
 x <- 10 
@@ -126,24 +132,26 @@ if (x < 5) {
 
 **Create an else if chain of statements**
 
-Change a chain of `if` and `else if` statements that print (i.e., `print("the grade is A"`) the letter grade for percentage scores according to [Uvic's Grading Standards](https://www.uvic.ca/humanities/atwp/current-students/grading/index.php). You can have the percentage score in a object called score, which will receive a value from 0 to 100.
+Change a chain of `if` and `else if` statements that print the letter grade (i.e., `print("the grade is A"`) for percentage scores according to [Uvic's Grading Standards](https://www.uvic.ca/humanities/atwp/current-students/grading/index.php). You can have the percentage score in a object called score, which will receive a value from 0 to 100.
 
 ```{r echo = F, results='asis'}
 startCodeDetailsBlock(summaryText = "Check your code")
 ```
 
 ```{r task-4-2}
+# Just a random score value between 0 and 100
 score <- 75
-if (score < 50) {
-  print("the grade is F")
-} else if (score < 60) {
-  print("the grade is D")
-} else if (score < 70) {
-  print("the grade is C")
-} else if (score < 80) {
-  print("the grade is B")
-} else {
-  print("the grade is A")
+
+if (score < 50) { # if the score is smaller than 50
+  print("the grade is F") # print the grade is F
+} else if (score < 60) { # if not smaller than 50 and smaller than 60
+  print("the grade is D") # print the grade is D
+} else if (score < 70) { # if not smaller than 60 and smaller than 70
+  print("the grade is C") # print the grade is C
+} else if (score < 80) { # if not smaller than 70 and smaller than 80
+  print("the grade is B") # print the grade is B
+} else { # if not any of the above
+  print("the grade is A") # print the grade is A
 }
 ```
 
@@ -173,10 +181,10 @@ What the `for` loop does is subsequentially run the statements for each item in 
 For example, using the scores from Activity 2, you could add the `if` and `else if` chain inside the for loop, and it will print the letter grade for each value of the vector. 
 ```{r for}
 # Create the vector of scores
-score <- c(62, 67, 69, 70, 72, 75, 80, 90)
+score <- c(75, 91, 68, 83, 66, 94, 85, 86, 75, 80)
 
 # Run the for-loop for each score in the vector
-for (i in score) { # this each item of the vector score to i, starting with the first item, and so on
+for (i in score) { # this sets each item of the vector score to i, starting with the first item, and so on
   if (i < 50) { # if i (i.e. the item from the vector score) is smaller than 50...
     print("the grade is F") # print the letter grade...
   } else if (i < 60) { # and so on
@@ -198,7 +206,7 @@ Here's an example for the scores:
 
 ```{r for-loop-saved}
 # Create the vector of scores
-score <- c(62, 67, 69, 70, 72, 75, 80, 90)
+score <- c(75, 91, 68, 83, 66, 94, 85, 86, 75, 80)
 
 # Create a vector where letter grades will be saved. The vector contains NA values, with the same length of the score vector
 grades <- rep(NA, times = length(score))
@@ -245,7 +253,7 @@ startCodeDetailsBlock(summaryText = "Check your code")
 
 ```{r task-4-3}
 # Create the vector of scores
-score <- c(62, 67, 69, 70, 72, 75, 80, 90)
+score <- c(75, 91, 68, 83, 66, 94, 85, 86, 75, 80)
 
 # Create object to save results
 comparison <- rep(NA, times = length(score))
@@ -288,7 +296,7 @@ A function usually takes in a number of inputs (also called arguments), performs
 For example, let's start with a very simple function so you understand how it works. Even though R has a built in `mean()` function, you can create that yourself:
 
 ```{r create-function}
-new_mean <- function(vector) { # creates a function called "new_mean", which had one argument called "vector"
+new_mean <- function(vector) { # creates a function called "new_mean", which has one argument called "vector"
   sum_values = sum(vector) # The function first sum the values in vector
   n_values = length(vector) # the it gets the number of values in the vector.
   mean_value = sum_values / n_values # then it calculates the mean by dividing the sum by the number of values
@@ -296,13 +304,13 @@ new_mean <- function(vector) { # creates a function called "new_mean", which had
 }
 ```
 
-Running the lines above in R doesn't do anything yet other than defining the function. To run the function (for exammple, to get the mean value of the student scores), you then have to call the function:
+Running the lines above in R doesn't do anything yet other than defining the function. To run the function (for example, to get the mean value of the student scores), you then have to call the function:
 ```{r run-function}
 new_mean(vector = score)
 ```
 Note that none of the objects created inside the function were actually created in your workspace. If you want to save the result in an object in your workspace:
 ```{r run-function2}
-# Run the function to calculate the mean and save it in the obect score_mean
+# Run the function to calculate the mean and save it in the object score_mean
 score_mean <- new_mean(vector = score)
 
 # See the resut
@@ -311,7 +319,7 @@ score_mean
 # Check if it's the same as R built-in function
 mean(score)
 ```
-So now you know how functions work in R. Functions are really useful when you want you are repeating the same task over and over it. For example, imagine you are an instructor who wants to easily and quickly transform your student's percentage scores to letter grades. Instead of writing that long `if else if` chain of commands every time, you could build a function that does it for you. Here's how you could do it:
+So now you know how functions work in R. Functions are really useful when you are repeating the same task over and over it. For example, imagine you are an instructor who wants to easily and quickly transform your student's percentage scores to letter grades. Instead of writing that long `if else if` chain of commands every time, you could build a function that does it for you. Here's how you could do it:
 
 ```{r function2}
 # Create function get_grades that transforms percentage scores into letter grades
@@ -342,7 +350,7 @@ get_grades <- function(percentages) { # the function has one argument called per
 Now you can use the function to get letter grades for any vector of scores
 ```{r run-function3}
 # Create the vector of scores
-score <- c(62, 67, 69, 70, 72, 75, 80, 90)
+score <- c(75, 91, 68, 83, 66, 94, 85, 86, 75, 80)
 # Get letter grades
 grades <- get_grades(percentages = score) # this says that the vector called "score" will serve as the argument called "percentages" in the function
 # See the grades
@@ -396,7 +404,7 @@ get_grades <- function(percentages) { # the function has one argument called per
 
 # Test the function
 # Create the vector of scores, with values larger than 100
-score <- c(62, 67, 69, 70, 72, 120, 80, 90)
+score <- c(75, 91, 68, 83, 120, 94, 85, 86, 75, 80)
 # Get letter grades
 grades <- get_grades(percentages = score)
 # See the grades

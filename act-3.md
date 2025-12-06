@@ -17,9 +17,13 @@ output:
 
 - You can pull up documentation for a function by executing
   `?function_name` (e.g. `?t.test`) in the Console.
+
+- You might want to start a new .Rmd file for this activity
+
 - Throughout this workshop, instead of typing in commands directly in
   the command line or in the code editor, type them in chunks of code in
   your .Rmd file.
+
 - Have the tidyverse package installed and loaded in RStudio:
 
 ``` r
@@ -53,9 +57,10 @@ sending it to the command line:
 life_expectancy <- read.csv("WHO_Life_Expectancy_Data.csv") # change to the appropriate file path to the downloaded dataset on your computer
 ```
 
-Let’s then preview the data to see if it was uploaded correctly. As you
-can see, the data shows multiple variables possibly related to overall
-life expectancy for different countries over the years.
+Let’s then preview the data to see if it was uploaded correctly (paste
+the code below in a chunk of code and then send it to the command line).
+As you can see, the data shows multiple variables possibly related to
+overall life expectancy for different countries over the years.
 
 ``` r
 head(life_expectancy)
@@ -103,7 +108,9 @@ We are going to use only data from the year of 2015 as it is most
 recent. For this, use the `filter()`function from `dplyr` (i.e.g, part
 of the `tidyverse` package), which we cover in the workshop
 [Introduction to
-RStudio](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target=“\_blank”}:
+RStudio](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target=“\_blank”}.
+Paste the code below in a chunk of code and then send it to the command
+line:
 
 ``` r
 # Filter the dataset
@@ -189,7 +196,7 @@ ggplot(data = life_expectancy_2015, # specify the data
 
 ![](act-3_files/figure-gfm/plot-1.png)<!-- -->
 
-### Fit a siple linear regression
+### Fit a simple linear regression
 
 The plot shows that a linear relationship is reasonable. Therefore, we
 will create a simple linear regression model where the response variable
@@ -306,10 +313,11 @@ for regression models.
 - **L**inearity: the model assumes the relationship between the
   variables is a linear relationship. You can check that visually in the
   scatter plot above. Another way to inspect is to plot the residuals of
-  the model as a function of the fitted values. If the relationship is
-  linear, the line should be flat (i.e., observations are equally
-  distributed above and below the line of fitted values of a linear
-  model).
+  the model as a function of the fitted values (paste the code below in
+  a chunk of code and then send it to the command line). If the
+  relationship is linear, the line should be flat (i.e., observations
+  are equally distributed above and below the line of fitted values of a
+  linear model).
 
 ``` r
 # Plot residuals versus fitted values
@@ -325,14 +333,16 @@ fitted values as they seem to be the ones deviating from the flat line.
 - **I**ndependence: the model assumes each observation is independent of
   the others. Although there are ways to visually inspect this
   assumption if you have concerns about temporal or spatial
-  non-independence, usually this assumption is met by considering the
-  structure of the data. In this case, we can reasonaly assume that the
-  contries are independent observations.
+  non-independence, as we have seen in the previous section, usually
+  this assumption is met by considering the structure of the data. In
+  this case, we can reasonably assume that the countries are independent
+  observations.
 
 - **N**ormality of the residuals: the model assumes the residuals are
   normally distributed. To inspect this, you can check a Q-Q Plot of the
-  residuals. In this plot, the points should be close to the line
-  (i.e. the line shows what would be expected for a normal
+  residuals (paste the code below in a chunk of code and then send it to
+  the command line). In this plot, the points should be close to the
+  line (i.e. the line shows what would be expected for a normal
   distribution).
 
 ``` r
@@ -349,9 +359,10 @@ analysis.
 - **E**qual variance of the residuals: the model assumes the spread of
   the residuals around the fitted line (i.e. their variance) is the same
   for the entire range of the predictor variable. To inspect that, you
-  can plot a scatter plot of standardized residuals versus fitted
-  values. Mainly, you want to check if this plot has a flat line, which
-  would tell you the residuals have the same variance same across the
+  can plot a scatter plot of standardized residuals versus fitted values
+  (paste the code below in a chunk of code and then send it to the
+  command line). Mainly, you want to check if this plot has a flat line,
+  which would tell you the residuals have the same variance across the
   model.
 
 ``` r
@@ -374,7 +385,8 @@ index of the population (BMI).
 
 ### Visualize trends
 
-First, let’s visualize the relationships:
+First, let’s visualize the relationships. Type the code below in a chunk
+of code and then send it to the command line.
 
 ``` r
 life_expectancy_2015 %>% 
@@ -441,7 +453,8 @@ Life expectancy = 2.16981 \* Schooling + 0.02442 \* BMI + 42.57196
 ### Assumptions
 
 Similar to the simple model, this command produces graphs to check the
-model assumptions.
+model assumptions. Type the code below in a chunk of code and then send
+it to the command line.
 
 ``` r
 # Changes plotting setting to create a panel with two rows and two columns to plot 4 graphs
@@ -461,7 +474,7 @@ par(mfrow = c(1,1))
 Again, the model does not seem to deviate much from assumtpions, but
 some outliers might be worth investigating further. The Residuals vs
 Leverage plot is helpful to identify outliers that might be affecting
-the model: they are show with the number of observation right next to
+the model: they are shown with the number of observation right next to
 (i.e., in this case, observations number 43, 54, and 147 are outliers)
 
 ## Conduct a single or multiple regression analysis with other variables of your choosing
@@ -476,6 +489,8 @@ relationships of your choosing. For that:
 As the end of this activity, your Markdown file may look like this:
 
 <img src="act-3_files/act3-rmarkdown.png" alt="act3 Rmd screenshot" style="width:720px;"/>
+
+Again, knit this document into a .pdf and see how it looks!
 
 [NEXT STEP: If statements, loops, and custom functions](act-4.html){:
 .btn .btn-blue }

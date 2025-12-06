@@ -25,5 +25,6 @@ At the end of this workshop, you will be able to:
 1.  Generate reports in .pdf, .docx, .html formats with RMarkdown
 2.  Use R to test for difference in means with t-tests and ANOVA
 3.  Use R to construct and assess linear regression models
+4.  Use if and for loops and create custom functions in R
 
 [NEXT STEP: Pre-Workshop Activities](pre-workshop.html){: .btn .btn-blue }

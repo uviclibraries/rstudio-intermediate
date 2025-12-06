@@ -5,8 +5,6 @@ nav_order: 2
 ---
 ## Pre-Workshop Videos & Activities
 
-Test test
-
 This workshop is primarily hands-on practice with RStudio in order to learn to use key features of the software. To participate fully please do the following **before the workshop**:
 
 ### Download & Install R then RStudio

@@ -13,7 +13,11 @@ output:
 ## Tips before you start:
 
 -   You can pull up documentation for a function by executing `?function_name` (e.g. `?t.test`) in the Console.
+
+-   You might want to start a new .Rmd file for this activity
+
 -   Throughout this workshop, instead of typing in commands directly in the command line or in the code editor, type them in chunks of code in your .Rmd file.
+
 -   Have the tidyverse package installed and loaded in RStudio:
 
 ```{r package, warning = FALSE, message = FALSE}
@@ -42,7 +46,7 @@ life_expectancy <- read.csv("docs/WHO_Life_Expectancy_Data.csv")
 life_expectancy <- read.csv("WHO_Life_Expectancy_Data.csv") # change to the appropriate file path to the downloaded dataset on your computer
 ```
 
-Let's then preview the data to see if it was uploaded correctly. As you can see, the data shows multiple variables possibly related to overall life expectancy for different countries over the years.
+Let's then preview the data to see if it was uploaded correctly (paste the code below in a chunk of code and then send it to the command line). As you can see, the data shows multiple variables possibly related to overall life expectancy for different countries over the years.
 
 ```{r preview}
 head(life_expectancy)
@@ -50,7 +54,7 @@ head(life_expectancy)
 
 ## Prepare the data
 
-We are going to use only data from the year of 2015 as it is most recent. For this, use the `filter()`function from `dplyr` (i.e.g, part of the `tidyverse` package), which we cover in the workshop [Introduction to RStudio](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target="\_blank"}:
+We are going to use only data from the year of 2015 as it is most recent. For this, use the `filter()`function from `dplyr` (i.e.g, part of the `tidyverse` package), which we cover in the workshop [Introduction to RStudio](https://uviclibraries.github.io/rstudio/tidyverse-data.html){:target="\_blank"}. Paste the code below in a chunk of code and then send it to the command line:
 
 ```{r filter}
 # Filter the dataset
@@ -86,7 +90,7 @@ ggplot(data = life_expectancy_2015, # specify the data
   geom_point() # plot a scatter plot
 ```
 
-### Fit a siple linear regression
+### Fit a simple linear regression
 
 The plot shows that a linear relationship is reasonable. Therefore, we will create a simple linear regression model where the response variable is `Life expectancy` and the predictor variable is `Schooling`. The model can be written as:
 
@@ -137,9 +141,9 @@ It seems like the line explains the trend in the data well. However, you will st
 
 ### Assumptions
 
-Linear regression makes several assumptions about the data, which form the acronym LINE: **l**inearity, **i**ndependence, **n**ormality, and **e**qual variance of the residuals. To inspect these assumptions, you can use the function `plot()` on a `lm` object in R (i.e. the object with results of a linear model), which plots 4 useful diagnostics plots for regression models. 
+Linear regression makes several assumptions about the data, which form the acronym LINE: **l**inearity, **i**ndependence, **n**ormality, and **e**qual variance of the residuals. To inspect these assumptions, you can use the function `plot()` on a `lm` object in R (i.e. the object with results of a linear model), which plots 4 useful diagnostics plots for regression models.
 
-- **L**inearity: the model assumes the relationship between the variables is a linear relationship. You can check that visually in the scatter plot above. Another way to inspect is to plot the residuals of the model as a function of the fitted values. If the relationship is linear, the line should be flat (i.e., observations are equally distributed above and below the line of fitted values of a linear model).
+-   **L**inearity: the model assumes the relationship between the variables is a linear relationship. You can check that visually in the scatter plot above. Another way to inspect is to plot the residuals of the model as a function of the fitted values (paste the code below in a chunk of code and then send it to the command line). If the relationship is linear, the line should be flat (i.e., observations are equally distributed above and below the line of fitted values of a linear model).
 
 ```{r linearity}
 # Plot residuals versus fitted values
@@ -148,9 +152,10 @@ plot(lm_schooling, 1) # the number 1 tells R to plot the 1st diagnostic plot
 
 The line is not perfectly flat, but it is reasonably close. Still, it suggests it might be good to examine the points with small and large fitted values as they seem to be the ones deviating from the flat line.
 
-- **I**ndependence: the model assumes each observation is independent of the others. Although there are ways to visually inspect this assumption if you have concerns about temporal or spatial non-independence, usually this assumption is met by considering the structure of the data. In this case, we can reasonaly assume that the contries are independent observations.
+-   **I**ndependence: the model assumes each observation is independent of the others. Although there are ways to visually inspect this assumption if you have concerns about temporal or spatial non-independence, as we have seen in the previous section, usually this assumption is met by considering the structure of the data. In this case, we can reasonably assume that the countries are independent observations.
 
-- **N**ormality of the residuals: the model assumes the residuals are normally distributed. To inspect this, you can check a Q-Q Plot of the residuals. In this plot, the points should be close to the line (i.e. the line shows what would be expected for a normal distribution).
+-   **N**ormality of the residuals: the model assumes the residuals are normally distributed. To inspect this, you can check a Q-Q Plot of the residuals (paste the code below in a chunk of code and then send it to the command line). In this plot, the points should be close to the line (i.e. the line shows what would be expected for a normal distribution).
+
 ```{r normality}
 # Plot Q-Q plot of the residuals
 plot(lm_schooling, 2) # the number 2 tells R to plot the 2nd diagnostic plot
@@ -158,7 +163,7 @@ plot(lm_schooling, 2) # the number 2 tells R to plot the 2nd diagnostic plot
 
 Again, overal the points are close to the line, but there seem to be a few outliers. We may want to examine these data points in further analysis.
 
-- **E**qual variance of the residuals: the model assumes the spread of the residuals around the fitted line (i.e. their variance) is the same for the entire range of the predictor variable. To inspect that, you can plot a scatter plot of standardized residuals versus fitted values. Mainly, you want to check if this plot has a flat line, which would tell you the residuals have the same variance same across the model.
+-   **E**qual variance of the residuals: the model assumes the spread of the residuals around the fitted line (i.e. their variance) is the same for the entire range of the predictor variable. To inspect that, you can plot a scatter plot of standardized residuals versus fitted values (paste the code below in a chunk of code and then send it to the command line). Mainly, you want to check if this plot has a flat line, which would tell you the residuals have the same variance across the model.
 
 ```{r variance}
 # Plot Q-Q plot of the residuals
@@ -173,9 +178,9 @@ Multiple linear regressions are very similar to simple regressions, but they con
 
 ### Visualize trends
 
-First, let's visualize the relationships:
+First, let's visualize the relationships. Type the code below in a chunk of code and then send it to the command line.
 
-```{r pairwise}        
+```{r pairwise}
 life_expectancy_2015 %>% 
   # Select the three relevant variables
   select(Life.expectancy, BMI, Schooling) %>%
@@ -193,7 +198,7 @@ Life expectancy = slope_1 \* BMI + slope_2 \* Schooling + intercept
 
 Type the following code in a chunk of code and send it to the command line to fit that model:
 
-```{r multiple-model}      
+```{r multiple-model}
 # Fit a multiple regression linear model
 lm_multiple <- lm(Life.expectancy ~ Schooling + BMI, data = life_expectancy_2015)
 
@@ -207,7 +212,7 @@ Life expectancy = 2.16981 \* Schooling + 0.02442 \* BMI + 42.57196
 
 ### Assumptions
 
-Similar to the simple model, this command produces graphs to check the model assumptions.
+Similar to the simple model, this command produces graphs to check the model assumptions. Type the code below in a chunk of code and then send it to the command line.
 
 ```{r assumption}
 # Changes plotting setting to create a panel with two rows and two columns to plot 4 graphs
@@ -220,7 +225,7 @@ plot(lm_multiple)
 par(mfrow = c(1,1))
 ```
 
-Again, the model does not seem to deviate much from assumtpions, but some outliers might be worth investigating further. The Residuals vs Leverage plot is helpful to identify outliers that might be affecting the model: they are show with the number of observation right next to (i.e., in this case, observations number 43, 54, and 147 are outliers)
+Again, the model does not seem to deviate much from assumtpions, but some outliers might be worth investigating further. The Residuals vs Leverage plot is helpful to identify outliers that might be affecting the model: they are shown with the number of observation right next to (i.e., in this case, observations number 43, 54, and 147 are outliers)
 
 ## Conduct a single or multiple regression analysis with other variables of your choosing
 
@@ -228,10 +233,12 @@ You can now use the `life_expectancy` dataset to explore other relationships of 
 
 -   Make a scatter plot to explore their linear relationship
 -   Build a linear regression model
--   Assess the results. Let the instructors know if you need help! 
+-   Assess the results. Let the instructors know if you need help!
 
 As the end of this activity, your Markdown file may look like this:
 
 <img src="act-3_files/act3-rmarkdown.png" alt="act3 Rmd screenshot" style="width:720px;"/>
+
+Again, knit this document into a .pdf and see how it looks!
 
 [NEXT STEP: If statements, loops, and custom functions](act-4.html){: .btn .btn-blue }
