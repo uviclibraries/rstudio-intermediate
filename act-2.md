@@ -114,7 +114,6 @@ conclusion?
 <details>
 
 <summary>
-
 Check the answer
 </summary>
 
