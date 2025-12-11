@@ -85,14 +85,11 @@ Try conducting a one-sample t-test where the alternative hypothesis is the mean 
 ```{r echo = F, results='asis'}
 startCodeDetailsBlock(summaryText = "Check the answer")
 ```
-
 ```{r task-2-1}
 # Perform a one-sample t-test to test if the mean of the sample is less than 65
 t.test(score, mu = 65, alternative = "less")
 ```
-
 With a p-value larger than 0.05, we cannot reject the null hypothesis that the population mean is equal to or higher than 65.
-
 ```{r echo = F, results='asis'}
 endCodeDetailsBlock()
 ```

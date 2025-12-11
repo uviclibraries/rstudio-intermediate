@@ -137,7 +137,6 @@ t.test(score, mu = 65, alternative = "less")
 
 With a p-value larger than 0.05, we cannot reject the null hypothesis
 that the population mean is equal to or higher than 65.
-
 </details>
 
 {::options parse_block_html='false'/}
