@@ -11,8 +11,6 @@ output:
 3-Linear Regressions
 ================
 
-# Linear Regressions
-
 ## Tips before you start:
 
 - You can pull up documentation for a function by executing

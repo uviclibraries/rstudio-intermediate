@@ -4,12 +4,12 @@ title: 2-Difference in Means
 nav_order: 3
 parent: Workshop Activities
 output: 
-  md_document:
-    variant: gfm        # GitHub-friendly markdown
-    preserve_yaml: TRUE # keep Jekyll front-matter
+  github_document:
+      preserve_yaml: TRUE
 ---
 
-# Test for Difference in Means (t-tests, ANOVA)
+2-Difference in Means
+================
 
 Tips before you start:
 

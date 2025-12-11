@@ -11,8 +11,6 @@ output:
 4-If Statements, Loops, Custom Functions
 ================
 
-# If Statements, Loops, Custom Functions
-
 ## Tips before you start:
 
 - You might want to start a new .Rmd file for this activity

@@ -8,8 +8,6 @@ output:
       preserve_yaml: TRUE
 ---
 
-# Linear Regressions
-
 ## Tips before you start:
 
 -   You can pull up documentation for a function by executing `?function_name` (e.g. `?t.test`) in the Console.
