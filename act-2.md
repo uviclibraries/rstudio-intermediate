@@ -4,12 +4,10 @@ title: 2-Difference in Means
 nav_order: 3
 parent: Workshop Activities
 output: 
-  github_document:
-      preserve_yaml: TRUE
+  md_document:
+    variant: gfm        # GitHub-friendly markdown
+    preserve_yaml: TRUE # keep Jekyll front-matter
 ---
-
-2-Difference in Means
-================
 
 # Test for Difference in Means (t-tests, ANOVA)
 
@@ -610,7 +608,7 @@ Here, the p-value of 0.6857 is larger than 0.05, which tell us that we
 cannot reject the null hypothesis that the groups have similar
 variances.
 
-**A final note on testins assumptions**: here, we have showed some
+**A final note on testing assumptions**: here, we have showed some
 simple ways to test assumptions of your tests. However, we recommend
 that you also familiarize yourself with visual ways to test assumptions,
 such as qqplots to check for normality. If you want a more detailed
