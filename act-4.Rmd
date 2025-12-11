@@ -4,8 +4,9 @@ title: 4-If Statements, Loops, Custom Functions
 nav_order: 5
 parent: Workshop Activities
 output: 
-  github_document:
-      preserve_yaml: TRUE
+  md_document:
+    variant: gfm        # GitHub-friendly markdown
+    preserve_yaml: TRUE # keep Jekyll front-matter
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +32,8 @@ endCodeDetailsBlock <- function() {
   cat("</details>{::options parse_block_html=&apos;false&apos;/}")
 }
 ```
+
+# If Statements, Loops, and Custom Functions
 
 ## Tips before you start:
 

@@ -4,12 +4,12 @@ title: 4-If Statements, Loops, Custom Functions
 nav_order: 5
 parent: Workshop Activities
 output: 
-  github_document:
-      preserve_yaml: TRUE
+  md_document:
+    variant: gfm        # GitHub-friendly markdown
+    preserve_yaml: TRUE # keep Jekyll front-matter
 ---
 
-4-If Statements, Loops, Custom Functions
-================
+# If Statements, Loops, and Custom Functions
 
 ## Tips before you start:
 

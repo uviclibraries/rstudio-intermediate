@@ -4,12 +4,12 @@ title: 3-Linear Regressions
 nav_order: 4
 parent: Workshop Activities
 output: 
-  github_document:
-      preserve_yaml: TRUE
+  md_document:
+    variant: gfm        # GitHub-friendly markdown
+    preserve_yaml: TRUE # keep Jekyll front-matter
 ---
 
-3-Linear Regressions
-================
+# Linear regressions
 
 ## Tips before you start:
 
