@@ -22,7 +22,7 @@ In this activity, we explore interactive data dashboard building with the packag
         -   A server (server) that contains the code to manipulate data and create graphs
         -   A function to combine these two previous components
             
-        <img src="images/act-4/intro-1.png" alt="shiny app" style="width:720px;">
+        <img src="act-5_files/intro-1.png" alt="shiny app" style="width:720px;">
         
         The Shiny package contains a few examples which display both the dashboards and the app.R scripts to create them. In practice, we don’t need to display the actual script as a part of the dashboard. Let’s give each of these a try. Exit each Shiny app by closing its window or hitting Escape on the keyboard.
         
