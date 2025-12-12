@@ -75,8 +75,8 @@ t.test(score, mu = 65, alternative = "greater")
 
 The p-value is smaller than 0.05, so we reject the null hypothesis and conclude that the population mean is significantly greater than 65.
 
-::: {.task-box markdown="1"}
-⭐ [Task 2-1]{.underline}
+<div class="task-box" markdown="1">
+&#11088; [Task 2-1]{.underline} 
 
 **Test another alternative hypothesis**
 
@@ -93,7 +93,7 @@ With a p-value larger than 0.05, we cannot reject the null hypothesis that the p
 ```{r echo = F, results='asis'}
 endCodeDetailsBlock()
 ```
-:::
+</div>
 
 ### Assumptions
 
