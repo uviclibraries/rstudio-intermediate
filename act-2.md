@@ -111,12 +111,7 @@ the mean is less than 65. What is the R command and what is your
 conclusion?
 
 {::options parse_block_html='true' /}
-<details>
-
-<summary>
-
-Check the answer
-</summary>
+<details><summary>Check the answer</summary>
 
 ``` r
 # Perform a one-sample t-test to test if the mean of the sample is less than 65
