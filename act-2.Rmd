@@ -208,7 +208,7 @@ For the boxplots, type this in a chunk of code and then send it to the command l
 par(mfrow = c(1, 2)) # this creates 1 row and 2 colums in the plot are
 boxplot(companyA) # boxplot of Company A
 boxplot(companyB) # boxplot of Company B
-par(mfrow = c(1, 1)) # this returns the plot area for a single plot
+par(mfrow = c(1, 1)) # this returns the plot area for a single plot. You need to run this, otherwise future plots will continue to be plotted with 1 row and 2 columns (meaning two plots per figure)
 ```
 
 As you can see, there are no outliers in the data.

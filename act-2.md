@@ -112,7 +112,9 @@ conclusion?
 
 {::options parse_block_html='true' /}
 <details>
+
 <summary>
+
 Check the answer
 </summary>
 
@@ -461,7 +463,7 @@ boxplot(companyB) # boxplot of Company B
 ![](act-2_files/figure-gfm/boxplot2-1.png)<!-- -->
 
 ``` r
-par(mfrow = c(1, 1)) # this returns the plot area for a single plot
+par(mfrow = c(1, 1)) # this returns the plot area for a single plot. You need to run this, otherwise future plots will continue to be plotted with 1 row and 2 columns (meaning two plots per figure)
 ```
 
 As you can see, there are no outliers in the data.
