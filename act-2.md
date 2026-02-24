@@ -25,7 +25,7 @@ Also, a quick note…
 
 <div class="task-box" markdown="1">
 
-<u>A quick note about using AI</u>
+<u><b>A quick note about using AI</b></u>
 
 As you move along with the activities in this workshop, you might find
 yourself wanting to add the prompts of the exercises and challenges to
@@ -37,11 +37,11 @@ verification of code produced by AI is still essential. Which means you
 need to understand enough about R to be able to assess the output given
 by an AI model. If AI is doing all your code for you and you don’t learn
 the underlying logic and syntax of R, it will be harder for you to
-evaluate if the output of the AI model is good. That being said, AI can
-definitely be a helpful tool, especially if you use with the right
-attitude and know what and how to ask for the most useful responses. It
-is beyond of the scope of this workshop to teach you best ways to use AI
-in coding, but you can find some useful tips
+evaluate the output of the AI model. That being said, AI can definitely
+be a helpful tool, especially if you use with the right attitude and
+know what and how to ask for the most useful responses. It is beyond of
+the scope of this workshop to teach you best ways to use AI in coding,
+but you can find some useful tips
 [here](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319)
 and [here](https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/).
 
