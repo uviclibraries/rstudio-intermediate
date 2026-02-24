@@ -655,3 +655,30 @@ the .pdf produced (by default, it is saved on the same folder as the
 
 [NEXT STEP: Simple and Multiple Linear Regressions](act-3.html){: .btn
 .btn-blue }
+
+<script>  
+function toggle(input) {
+    var x = document.getElementById(input);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<style>
+details {
+    background-color: lightgray; 
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.task-box {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background-color: #f5f2f6;
+  }
+  &#10;</style>
