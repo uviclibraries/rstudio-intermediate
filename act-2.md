@@ -39,8 +39,9 @@ their output. That being said, AI can definitely be a helpful tool,
 especially if you use with the right attitude and know what and how to
 ask for the most useful responses. While this workshop doesn’t cover
 best practices for using AI in coding, you can find some useful tips
-[here](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319){:target=“\_blank”}and
-[here](https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/){:target=“\_blank”}.
+<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319" target="_blank" rel="noopener noreferrer">here</a>
+and
+<a href="https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/" target="_blank" rel="noopener noreferrer">here</a>.
 
 </div>
 
