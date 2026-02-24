@@ -1,4 +1,4 @@
-# Data Analysis with R Studio - Intermediate data analysis
+# RStudio Data analysis Intermediate
 ### UVic Libraries Digital Scholarship Commmons
 
 Link to workshop: https://uviclibraries.github.io/rstudio-intermediate/
