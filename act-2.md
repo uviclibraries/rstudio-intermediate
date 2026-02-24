@@ -39,8 +39,9 @@ their output. That being said, AI can definitely be a helpful tool,
 especially if you use with the right attitude and know what and how to
 ask for the most useful responses. While this workshop doesn’t cover
 best practices for using AI in coding, you can find some useful tips
-[here](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319)
-and [here](https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/).
+[here](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319){:target=“\_blank”}
+and
+[here](https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/){:target=“\_blank”}.
 
 </div>
 
@@ -610,7 +611,7 @@ team comes from a normal distribution. Instead of performing a
 Shapiro-Wilk test separately on each group, you could also test if the
 residuals of the model are normally distributed. To know more about how
 to do this, check [this
-link](https://mvanrongen.github.io/corestats-in-r_tidyverse/cs2-anova.html#normality).
+link](https://mvanrongen.github.io/corestats-in-r_tidyverse/cs2-anova.html#normality){:target=“\_blank”}.
 
 To test if the variance is the same across groups, you can do a Bartlett
 test, which tests how probable is your data under a null hypothesis of
@@ -637,7 +638,7 @@ that you also familiarize yourself with visual ways to test assumptions,
 such as qqplots to check for normality. If you want a more detailed
 explanation of how to visually test assumptions (and about these tests
 overall),
-[this](https://mvanrongen.github.io/corestats-in-r_tidyverse/index.html)
+[this](https://mvanrongen.github.io/corestats-in-r_tidyverse/index.html){:target=“\_blank”}
 is a great resource.
 
 # The R Markdown file
