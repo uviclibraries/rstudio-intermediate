@@ -17,10 +17,6 @@ Tips before you start:
 - You can pull up documentation for a function by executing
   `?function_name` (e.g. `?t.test`) in the Console.
 
-- Throughout this workshop, instead of typing in commands directly in
-  the command line or in the code editor, type them in chunks of code in
-  your .Rmd file.
-
 - Also, a quick note…
 
 <div class="task-box" markdown="1">
@@ -44,6 +40,37 @@ and
 <a href="https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/" target="_blank" rel="noopener noreferrer">here</a>.
 
 </div>
+
+## Organize your .Rmd file
+
+Before we start, clean the content of your markdown file:
+
+- Delete all the example text and chunks of code that came with it when
+  you opened the template.
+
+- Give a heading for this activity by typing `# Activity 2` at the top
+
+- Start a second-level heading for the one sample t-test below by typing
+  `## One-sample t-test` in the line below
+
+- Create a chunk of R code. You can do this in multiple ways:
+
+- Type in “\`\`\`{r}” in one line, hit enter twice, and type in “\`\`\`”
+  to finish the code chunk.
+
+- Click on the “Insert a new code chunk” button at the top right, and
+  then select R:
+
+  <figure>
+  <img src="add-code-chunk-button.png" alt="Insert code chunk button" />
+  <figcaption aria-hidden="true">Insert code chunk button</figcaption>
+  </figure>
+
+- Use the keyboard shortcut “Ctrl + Shift + I” (for windows)
+
+Now you can start going through the workshop activities! Throughout this
+workshop, instead of typing in commands directly in the command line or
+in the code editor, type them in the chunks of code in your .Rmd file.
 
 ## One-sample t-test
 
@@ -161,6 +188,7 @@ t.test(score, mu = 65, alternative = "less")
 
 With a p-value larger than 0.05, we cannot reject the null hypothesis
 that the population mean is equal to or higher than 65.
+
 </details>
 
 {::options parse_block_html='false'/}

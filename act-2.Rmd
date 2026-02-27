@@ -40,17 +40,35 @@ Tips before you start:
 
 -   You can pull up documentation for a function by executing `?function_name` (e.g. `?t.test`) in the Console.
 
--   Throughout this workshop, instead of typing in commands directly in the command line or in the code editor, type them in chunks of code in your .Rmd file.
-
 -   Also, a quick note...
 
-  <div class="task-box" markdown="1">
+::: {.task-box markdown="1"}
+<u><b>A quick note about using AI</b></u>
 
-  <u><b>A quick note about using AI</b></u>
+As you work through this workshop, you may feel tempted to ask an AI model for help with the exercises. We discourage this because delegating something to AI can prevent you from developing that skill. In fact, one of the most effective ways to learn R is to troubleshoot code by yourself. AI models can also hallucinate and produce incorrect code, so you need to understand enough about R to be able to evaluate their output. If AI is doing all your coding for you and you don't learn the underlying logic and syntax of R, it will be harder for you to verify their output. That being said, AI can definitely be a helpful tool, especially if you use with the right attitude and know what and how to ask for the most useful responses. While this workshop doesn’t cover best practices for using AI in coding, you can find some useful tips <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/" target="_blank" rel="noopener noreferrer">here</a>.
+:::
 
-  As you work through this workshop, you may feel tempted to ask an AI model for help with the exercises. We discourage this because delegating something to AI can prevent you from developing that skill. In fact, one of the most effective ways to learn R is to troubleshoot code by yourself. AI models can also hallucinate and produce incorrect code, so you need to understand enough about R to be able to evaluate their output. If AI is doing all your coding for you and you don't learn the underlying logic and syntax of R, it will be harder for you to verify their output. That being said, AI can definitely be a helpful tool, especially if you use with the right attitude and know what and how to ask for the most useful responses. While this workshop doesn’t cover best practices for using AI in coding, you can find some useful tips <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011319" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://tidyverse.org/blog/2025/04/learn-tidyverse-ai/" target="_blank" rel="noopener noreferrer">here</a>.
+## Organize your .Rmd file
 
-  </div>
+Before we start, clean the content of your markdown file:
+
+-   Delete all the example text and chunks of code that came with it when you opened the template.
+
+-   Give a heading for this activity by typing `# Activity 2` at the top
+
+-   Start a second-level heading for the one sample t-test below by typing `## One-sample t-test` in the line below
+
+-   Create a chunk of R code. You can do this in multiple ways:
+
+  -   Type in "\`\`\`{r}" in one line, hit enter twice, and type in "\`\`\`" to finish the code chunk. 
+
+  -   Click on the "Insert a new code chunk" button at the top right, and then select R:
+      
+      ![Insert code chunk button](add-code-chunk-button.png)
+
+   -   Use the keyboard shortcut "Ctrl + Shift + I " (for windows)
+   
+Now you can start going through the workshop activities! Throughout this workshop, instead of typing in commands directly in the command line or in the code editor, type them in the chunks of code in your .Rmd file.
 
 ## One-sample t-test
 
@@ -85,8 +103,8 @@ t.test(score, mu = 65, alternative = "greater")
 
 The p-value is smaller than 0.05, so we reject the null hypothesis and conclude that the population mean is significantly greater than 65.
 
-<div class="task-box" markdown="1">
-&#11088; [Task 2-1]{.underline} 
+::: {.task-box markdown="1"}
+⭐ [Task 2-1]{.underline}
 
 **Test another alternative hypothesis**
 
@@ -95,15 +113,18 @@ Try conducting a one-sample t-test where the alternative hypothesis is the mean 
 ```{r echo = F, results='asis'}
 startCodeDetailsBlock(summaryText = "Check the answer")
 ```
+
 ```{r task-2-1}
 # Perform a one-sample t-test to test if the mean of the sample is less than 65
 t.test(score, mu = 65, alternative = "less")
 ```
+
 With a p-value larger than 0.05, we cannot reject the null hypothesis that the population mean is equal to or higher than 65.
+
 ```{r echo = F, results='asis'}
 endCodeDetailsBlock()
 ```
-</div>
+:::
 
 ### Assumptions
 
@@ -279,7 +300,7 @@ shapiro.test(df$height[df$team == "T2"])
 shapiro.test(df$height[df$team == "T3"])
 ```
 
-All p-values are larger than 0.05, so we assume that the data from each team comes from a normal distribution. Instead of performing a Shapiro-Wilk test separately on each group, you could also test if the residuals of the model are normally distributed. To know more about how to do this, check [this link](https://mvanrongen.github.io/corestats-in-r_tidyverse/cs2-anova.html#normality){:target="_blank"}.
+All p-values are larger than 0.05, so we assume that the data from each team comes from a normal distribution. Instead of performing a Shapiro-Wilk test separately on each group, you could also test if the residuals of the model are normally distributed. To know more about how to do this, check [this link](https://mvanrongen.github.io/corestats-in-r_tidyverse/cs2-anova.html#normality){:target="\_blank"}.
 
 To test if the variance is the same across groups, you can do a Bartlett test, which tests how probable is your data under a null hypothesis of equal variance across groups.
 
@@ -290,7 +311,6 @@ bartlett.test(height ~ team, data = df)
 ```
 
 Here, the p-value of `r round(bartlett.test(height ~ team, data = df)$p.value, 4)` is larger than 0.05, which tell us that we cannot reject the null hypothesis that the groups have similar variances.
-
 
 **A final note on testing assumptions**: here, we have showed some simple ways to test assumptions of your tests. However, we recommend that you also familiarize yourself with visual ways to test assumptions, such as qqplots to check for normality. If you want a more detailed explanation of how to visually test assumptions (and about these tests overall), [this](https://mvanrongen.github.io/corestats-in-r_tidyverse/index.html){:target=“\_blank”} is a great resource.
 
@@ -304,6 +324,7 @@ Click on the "Knit" buttom to knit your file into .pdf and then check the .pdf p
 
 [NEXT STEP: Simple and Multiple Linear Regressions](act-3.html){: .btn .btn-blue }
 
+```{=html}
 <script>  
 function toggle(input) {
     var x = document.getElementById(input);
@@ -314,6 +335,9 @@ function toggle(input) {
     }
 }
 </script>
+```
+
+```{=html}
 <style>
 details {
     background-color: lightgray; 
@@ -329,3 +353,4 @@ details {
       background-color: #f5f2f6;
   }
   &#10;</style>
+```
