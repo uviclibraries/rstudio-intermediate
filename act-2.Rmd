@@ -59,7 +59,7 @@ Before we start, clean the content of your markdown file:
     -   Type in "\`\`\`{r}" in one line, hit enter twice, and type in "\`\`\`" to finish the code chunk. 
     -   Click on the "Insert a new code chunk" button at the top right, and then select R:
     
-    ![Insert code chunk button](images/add-code-chunk-button.png)
+    ![](images/add-code-chunk-button.png)
     
     -   Use the keyboard shortcut "Ctrl + Shift + I " (for windows)
    

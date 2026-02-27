@@ -15,12 +15,16 @@ output:
 
 - You can pull up documentation for a function by executing
   `?function_name` (e.g. `?t.test`) in the Console.
+
 - You might want to start a new .Rmd file for this activity
+
 - Throughout this workshop, instead of typing in commands directly in
   the command line or in the code editor, type them in chunks of code in
   your .Rmd file.
+
 - Now that you are bit more familiar on how to use .Rmd files,there are
   some additional tips that make it using .Rmd files easier:
+
   - You can run each individual chunk of code all at once by clicking on
     the little green arrow facing right at the top right of each chunk:
     ![Run chunk button](images/run-chunk-button.png)
@@ -34,10 +38,8 @@ output:
     decide, click on the setting buton on the right of the knitting
     button, and select the option you prefer.
 
-  <figure>
-  <img src="images/chunk-output-choice.png" alt="Chunk output choice" />
-  <figcaption aria-hidden="true">Chunk output choice</figcaption>
-  </figure>
+  ![](images/chunk-output-choice.png)
+
 - Finally, have the tidyverse package installed and loaded in RStudio
   before you start this activity:
 
