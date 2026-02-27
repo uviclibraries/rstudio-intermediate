@@ -47,26 +47,16 @@ Before we start, clean the content of your markdown file:
 
 - Delete all the example text and chunks of code that came with it when
   you opened the template.
-
 - Give a heading for this activity by typing `# Activity 2` at the top
-
 - Start a second-level heading for the one sample t-test below by typing
   `## One-sample t-test` in the line below
-
 - Create a chunk of R code. You can do this in multiple ways:
-
-- Type in “\`\`\`{r}” in one line, hit enter twice, and type in “\`\`\`”
-  to finish the code chunk.
-
-- Click on the “Insert a new code chunk” button at the top right, and
-  then select R:
-
-  <figure>
-  <img src="add-code-chunk-button.png" alt="Insert code chunk button" />
-  <figcaption aria-hidden="true">Insert code chunk button</figcaption>
-  </figure>
-
-- Use the keyboard shortcut “Ctrl + Shift + I” (for windows)
+  - Type in “\`\`\`{r}” in one line, hit enter twice, and type in
+    “\`\`\`” to finish the code chunk.
+  - Click on the “Insert a new code chunk” button at the top right, and
+    then select R: ![Insert code chunk
+    button](images/add-code-chunk-button.png)
+  - Use the keyboard shortcut “Ctrl + Shift + I” (for windows)
 
 Now you can start going through the workshop activities! Throughout this
 workshop, instead of typing in commands directly in the command line or
