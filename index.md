@@ -6,7 +6,7 @@ nav_order: 1
 
 <img src="images/logo.png" style="float:right;width:180px;" alt="logo">
 
-# Data Analysis with R Studio - Intermediate data analysis
+# RStudio Intermediate Data Analysis
 
 - Pre-workshop activities: 15 min 
 - Introductory presentation: 15 min
