@@ -58,7 +58,7 @@ Before we start, clean the content of your markdown file:
 -   Create a chunk of R code. You can do this in multiple ways:
     -   Type in "\`\`\`{r}" in one line, hit enter twice, and type in "\`\`\`" to finish the code chunk. 
     -   Click on the "Insert a new code chunk" button at the top right, and then select R:
-    ![Insert code chunk button](images/add-code-chunk-button.png)
+        ![Insert code chunk button](images/add-code-chunk-button.png)
     -   Use the keyboard shortcut "Ctrl + Shift + I " (for windows)
    
 Now you can start going through the workshop activities! Throughout this workshop, instead of typing in commands directly in the command line or in the code editor, type them in the chunks of code in your .Rmd file.
