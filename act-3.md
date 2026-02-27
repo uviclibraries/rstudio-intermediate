@@ -22,7 +22,30 @@ output:
   the command line or in the code editor, type them in chunks of code in
   your .Rmd file.
 
-- Have the tidyverse package installed and loaded in RStudio:
+- Now that you are bit more familiar on how to use .Rmd files,there are
+  some additional tips that make it using .Rmd files easier:
+
+- You can run each individual chunk of code all at once by clicking on
+  the little green arrow facing right at the top right of each chunk:
+  ![Run chunk button](images/run-chunk-button.png)
+
+- You can run all chunks of code above by clicking on the little gray
+  arrow facing down at the top right of each chunk: ![Run previous
+  chunks button](images/run-previous-chunks-button.png)
+
+- You can decide if you want R Studio to output the results of each
+  chunk of code inline in your R Markdown file, or in the console. This
+  is just for when your are actively working on the file, when knitting,
+  all outputs appear right after the chunk of code. To decide, click on
+  the setting buton on the right of the knitting button, and select the
+  option you prefer.
+
+<!-- -->
+
+    ![Chunk output choice](images/chunk-output-choice.png)
+
+- Finally, yave the tidyverse package installed and loaded in RStudio
+  before you start this activity:
 
 ``` r
 # only need to run once in the console if tidyverse not installed: install.packages('tidyverse')
