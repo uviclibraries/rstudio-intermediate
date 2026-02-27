@@ -54,8 +54,14 @@ Before we start, clean the content of your markdown file:
   - Type in “\`\`\`{r}” in one line, hit enter twice, and type in
     “\`\`\`” to finish the code chunk.
   - Click on the “Insert a new code chunk” button at the top right, and
-    then select R: ![Insert code chunk
-    button](images/add-code-chunk-button.png)
+    then select R:
+
+  <figure>
+  <img src="images/add-code-chunk-button.png"
+  alt="Insert code chunk button" />
+  <figcaption aria-hidden="true">Insert code chunk button</figcaption>
+  </figure>
+
   - Use the keyboard shortcut “Ctrl + Shift + I” (for windows)
 
 Now you can start going through the workshop activities! Throughout this

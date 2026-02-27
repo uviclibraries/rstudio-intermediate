@@ -32,8 +32,12 @@ output:
     This is just for when your are actively working on the file, when
     knitting, all outputs appear right after the chunk of code. To
     decide, click on the setting buton on the right of the knitting
-    button, and select the option you prefer. ![Chunk output
-    choice](images/chunk-output-choice.png)
+    button, and select the option you prefer.
+
+  <figure>
+  <img src="images/chunk-output-choice.png" alt="Chunk output choice" />
+  <figcaption aria-hidden="true">Chunk output choice</figcaption>
+  </figure>
 - Finally, have the tidyverse package installed and loaded in RStudio
   before you start this activity:
 
