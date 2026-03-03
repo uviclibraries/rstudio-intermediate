@@ -31,7 +31,12 @@ yourself. AI models can also hallucinate and produce incorrect code, so
 you need to understand enough about R to be able to evaluate their
 output. If AI is doing all your coding for you and you don’t learn the
 underlying logic and syntax of R, it will be harder for you to verify
-their output. That being said, AI can definitely be a helpful tool,
+their output. Remember, you should think of AI as your research
+assistant, and you are still responsible for any code produced by AI.
+Also note that, if you want an AI model to develop code for your data,
+you should be careful about sharing confidential information (i.e. your
+dataset) with AI models, and should only do so if you have ethics
+approval. That being said, AI can definitely be a helpful tool,
 especially if you use with the right attitude and know what and how to
 ask for the most useful responses. While this workshop doesn’t cover
 best practices for using AI in coding, you can find some useful tips
