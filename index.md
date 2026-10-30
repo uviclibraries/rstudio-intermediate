@@ -27,4 +27,6 @@ At the end of this workshop, you will be able to:
 3.  Use R to construct and assess linear regression models
 4.  Use if and for loops and create custom functions in R
 
+<img src="images/apple-vision-pro-1.png" style="width:800px;" alt="decoration">
+
 [NEXT STEP: Pre-Workshop Activities](pre-workshop.html){: .btn .btn-blue }
