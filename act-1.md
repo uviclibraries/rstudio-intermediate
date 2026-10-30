@@ -21,7 +21,7 @@ The .Rmd files are plain text files. They contain three types of content:
 - Text using simple text formatting. Everything not between the YAML and code chunk marks is read as simple text.
 
 See the example markdown file below and try to identify the three types of content:
-<img src="images/act-1/marrkdown-example.png" alt="markdown example" style="width:500px">
+<img src="images/act-1/marrkdown-example.png" alt="markdown example" style="width:800px">
 
 When using an R Markdown file in RStudio, it automatically generates an interface where you can run each chunk of code independently and see the results in the console or inline after the chunk of code (this is called an [R Notebook](https://bookdown.org/yihui/rmarkdown/notebook.html){:target="_blank"}). This is already a super helpful feature to organize your code. However, R Markdown is also powerful because you can generate reports in multiple formats such as .html, .docx, and .pdf.
 
@@ -41,7 +41,7 @@ For the rest of the workshop, we will save our code in an R Markdown file. Let's
 -   Open RStudio, click **File -> New File -> RMarkdown...**
 -   Enter title, author, and select the type of output format **PDF** and click **OK*
 -   The Markdown document with some example code will appear in your Editor window.
-    <img src="images/act-1/markdown-file.png" alt="markdown example" style="width:500px">
+    <img src="images/act-1/markdown-file.png" alt="markdown example" style="width:800px">
 
 -   After creating your R Markdown file, you must save it. Click **File -> Save As ->...** Enter the filename and make sure to remember where you saved it.
 
